@@ -1,0 +1,29 @@
+File: api
+Type: inuse_space
+Time: 2026-09-22 21:17:45 CST
+Showing nodes accounting for -510.57kB, 33.18% of 1538.57kB total
+Dropped 10 nodes (cum <= 7.69kB)
+      flat  flat%   sum%        cum   cum%
+     514kB 33.41% 33.41%      514kB 33.41%  github.com/go-sql-driver/mysql.newBuffer (inline)
+ -512.56kB 33.31% 0.094%  -512.56kB 33.31%  internal/poll.runtime_pollSetDeadline
+ -512.01kB 33.28% 33.18%  -512.01kB 33.28%  reflect.unsafe_New
+         0     0% 33.18%      514kB 33.41%  database/sql.(*DB).conn
+         0     0% 33.18%      514kB 33.41%  database/sql.(*DB).retry
+         0     0% 33.18%  -512.01kB 33.28%  database/sql.(*Rows).Scan
+         0     0% 33.18%  -512.01kB 33.28%  database/sql.(*Rows).scanLocked
+         0     0% 33.18%      514kB 33.41%  database/sql.(*Stmt).QueryContext
+         0     0% 33.18%      514kB 33.41%  database/sql.(*Stmt).QueryContext.func1
+         0     0% 33.18%      514kB 33.41%  database/sql.(*Stmt).connStmt
+         0     0% 33.18%  -512.01kB 33.28%  database/sql.convertAssignRows
+         0     0% 33.18%      514kB 33.41%  github.com/go-sql-driver/mysql.(*connector).Connect
+         0     0% 33.18%  -512.01kB 33.28%  gorm.io/gorm.(*DB).scanIntoStruct
+         0     0% 33.18%      514kB 33.41%  gorm.io/gorm.(*PreparedStmtDB).QueryContext
+         0     0% 33.18%  -512.01kB 33.28%  gorm.io/gorm.Scan
+         0     0% 33.18%  -512.56kB 33.31%  internal/poll.(*FD).SetWriteDeadline (inline)
+         0     0% 33.18%  -512.56kB 33.31%  internal/poll.setDeadlineImpl
+         0     0% 33.18%  -512.56kB 33.31%  net.(*conn).SetWriteDeadline
+         0     0% 33.18%  -512.56kB 33.31%  net.(*netFD).SetWriteDeadline (inline)
+         0     0% 33.18%  -512.56kB 33.31%  net/http.(*conn).readRequest
+         0     0% 33.18%  -512.56kB 33.31%  net/http.(*conn).readRequest.func1
+         0     0% 33.18%  -512.56kB 33.31%  net/http.(*conn).serve
+         0     0% 33.18%  -512.01kB 33.28%  reflect.New

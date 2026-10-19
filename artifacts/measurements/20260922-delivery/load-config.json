@@ -1,0 +1,25 @@
+{
+  "shop_query": {
+    "seed_shops": 10000,
+    "requests_per_round": 20000,
+    "concurrency": 100,
+    "hot_shop_count": 100,
+    "hot_request_percent": 80,
+    "baseline_mode": "mysql",
+    "optimized_mode": "two-level",
+    "measured_rounds_per_hot_mode": 3,
+    "percentile_method": "nearest-rank"
+  },
+  "async_purchase": {
+    "activity_id": 202,
+    "users": 500,
+    "requests": 500,
+    "concurrency": 100,
+    "worker_count": 4,
+    "prefetch": 4,
+    "latency_start": "purchase_requests.accepted_at",
+    "latency_end": "orders.created_at",
+    "http_202_is_terminal": false,
+    "percentile_method": "nearest-rank"
+  }
+}

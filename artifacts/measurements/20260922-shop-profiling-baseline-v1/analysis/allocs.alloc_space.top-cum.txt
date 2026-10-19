@@ -1,0 +1,52 @@
+File: api
+Type: alloc_space
+Time: 2026-09-22 21:04:15 CST
+Duration: 30.01s, Total samples = 3269.41MB 
+Showing nodes accounting for 3208.73MB, 98.14% of 3269.41MB total
+Dropped 119 nodes (cum <= 16.35MB)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%  3157.39MB 96.57%  net/http.(*conn).serve
+  324.57MB  9.93%  9.93%  1578.85MB 48.29%  net/http.(*conn).readRequest
+         0     0%  9.93%  1561.03MB 47.75%  net/http.serverHandler.ServeHTTP
+         0     0%  9.93%  1557.88MB 47.65%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+  420.09MB 12.85% 22.78%  1557.38MB 47.64%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+         0     0% 22.78%  1557.38MB 47.64%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0% 22.78%  1557.38MB 47.64%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0% 22.78%  1557.38MB 47.64%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+  361.61MB 11.06% 33.84%  1139.78MB 34.86%  net/http.readRequest
+      15MB  0.46% 34.30%  1093.28MB 33.44%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+         0     0% 34.30%  1078.28MB 32.98%  github.com/gin-gonic/gin.(*Context).Render
+         0     0% 34.30%  1078.28MB 32.98%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0% 34.30%  1078.28MB 32.98%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0% 34.30%   579.64MB 17.73%  net/textproto.(*Reader).ReadMIMEHeader (inline)
+  579.64MB 17.73% 52.02%   579.64MB 17.73%  net/textproto.readMIMEHeader
+         0     0% 52.02%   452.13MB 13.83%  github.com/gin-gonic/gin.(*responseWriter).Write
+         0     0% 52.02%   452.13MB 13.83%  github.com/gin-gonic/gin.(*responseWriter).WriteHeaderNow (inline)
+         0     0% 52.02%   452.13MB 13.83%  net/http.(*response).WriteHeader
+  452.13MB 13.83% 65.85%   452.13MB 13.83%  net/http.Header.Clone (inline)
+  396.63MB 12.13% 77.99%   396.63MB 12.13%  github.com/gin-gonic/gin/render.writeContentType
+  138.02MB  4.22% 82.21%   230.02MB  7.04%  encoding/json.Marshal
+         0     0% 82.21%   159.02MB  4.86%  net/url.ParseRequestURI
+  159.02MB  4.86% 87.07%   159.02MB  4.86%  net/url.parse
+   14.50MB  0.44% 87.51%   114.01MB  3.49%  context.WithCancel
+   98.51MB  3.01% 90.53%    99.51MB  3.04%  context.withCancel (inline)
+   92.51MB  2.83% 93.36%    92.51MB  2.83%  net.(*conn).Read
+         0     0% 93.36%    92.51MB  2.83%  net/http.(*connReader).backgroundRead
+         0     0% 93.36%       92MB  2.81%  encoding/json.(*encodeState).marshal
+         0     0% 93.36%       92MB  2.81%  encoding/json.(*encodeState).reflectValue
+   52.50MB  1.61% 94.96%    91.50MB  2.80%  encoding/json.mapEncoder.encode
+         0     0% 94.96%    44.01MB  1.35%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0% 94.96%    44.01MB  1.35%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+         0     0% 94.96%       39MB  1.19%  reflect.copyVal
+      39MB  1.19% 96.16%       39MB  1.19%  reflect.unsafe_New
+   37.50MB  1.15% 97.30%    37.50MB  1.15%  net/textproto.(*Reader).ReadLine (inline)
+    1.50MB 0.046% 97.35%    28.50MB  0.87%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+   25.50MB  0.78% 98.13%       27MB  0.83%  fmt.Sprintf
+         0     0% 98.13%    20.50MB  0.63%  reflect.(*MapIter).Value
+         0     0% 98.13%    18.51MB  0.57%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0% 98.13%    18.50MB  0.57%  reflect.(*MapIter).Key
+         0     0% 98.13%    17.01MB  0.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+    0.50MB 0.015% 98.14%    17.01MB  0.52%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0% 98.14%    16.51MB   0.5%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0% 98.14%    16.51MB   0.5%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0% 98.14%    16.51MB   0.5%  golang.org/x/sync/singleflight.(*Group).doCall.func2

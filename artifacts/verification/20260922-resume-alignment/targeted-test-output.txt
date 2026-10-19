@@ -1,0 +1,56 @@
+Command group:
+LOCAL_LIFE_INTEGRATION=1 GOCACHE=/private/tmp/huixiang-go-cache go test -race -count=1 -v ./internal/coupon -run '<targeted cases>'
+LOCAL_LIFE_INTEGRATION=1 GOCACHE=/private/tmp/huixiang-go-cache go test -race -count=1 -v ./internal/admission ./internal/recovery -run '<targeted cases>'
+LOCAL_LIFE_INTEGRATION=1 GOCACHE=/private/tmp/huixiang-go-cache go test -race -count=1 -v ./internal/order -run '<targeted cases>'
+
+=== RUN   TestCachedRepositoryInvalidationRefreshesWarmListAndNeverRegressesGeneration
+--- PASS: TestCachedRepositoryInvalidationRefreshesWarmListAndNeverRegressesGeneration (0.00s)
+TestRedisListGenerationAdvanceIsMonotonicIntegration PASS (final Redis race package run).
+=== RUN   TestPublicRoutesComposeWithShopDetailWildcard
+--- PASS: TestPublicRoutesComposeWithShopDetailWildcard (0.00s)
+=== RUN   TestCouponInvalidationRetriesThenSucceedsIntegration
+--- PASS: TestCouponInvalidationRetriesThenSucceedsIntegration (0.03s)
+=== RUN   TestCouponInvalidationPoisonAndLeaseFencesIntegration
+--- PASS: TestCouponInvalidationPoisonAndLeaseFencesIntegration (0.06s)
+=== RUN   TestUpdateOwnedWritesCouponInvalidationIntegration
+--- PASS: TestUpdateOwnedWritesCouponInvalidationIntegration (0.02s)
+PASS
+ok  github.com/CsBillChang/local-life-platform/internal/coupon  1.487s
+
+TestRedisAdmissionLuaChecksWindowAndDeadlineWithoutGoValidation:
+before_start PASS; at_start PASS; before_end PASS; at_end PASS; expired PASS;
+after_natural_end PASS; large_generation PASS.
+TestRedisAdmissionMetadataDamageFailsClosed:
+meta PASS; schema PASS; generation PASS; starts_sec PASS; ends_usec PASS;
+users PASS; requests PASS; user-sentinel PASS; request-sentinel PASS;
+release-sentinel PASS; wrong-type PASS.
+TestRedisRebuildPublishesAndVerifiesTimeMetadata PASS.
+ok  github.com/CsBillChang/local-life-platform/internal/admission  1.308s
+
+TestMySQLRedisRebuildCrashResumeAndHistoricalEligibility:
+FROZEN PASS; NORMALIZED PASS; INSTALLED PASS; VERIFIED PASS;
+REDIS_OPEN PASS; DONE PASS. Each resumed with owners=3 and stock=2.
+ok  github.com/CsBillChang/local-life-platform/internal/recovery  2.043s
+
+TestAdmissionCoordinatorMySQLRedisRecovery:
+concurrent_replay PASS; after_reserve_crash PASS; soldout PASS; disabled PASS;
+generation_fence PASS; expired PASS; redis_transient PASS; db_transient PASS;
+db_commit_lost PASS.
+TestAsyncRabbitRedeliveryAfterOrderCommitBeforeAck PASS:
+redelivered=true same_request=true same_order=true orders=1 DEDUCT=1 RELEASE=0 available_stock=0.
+TestMySQLPaymentCloseCompetition PASS: rounds=6 payment=2 close=4.
+TestMySQLRefundRedemptionCompetition PASS: rounds=6 refund=6 redemption=0.
+TestMySQLRecordQueriesRespectOwnerAndMerchantShopMembership PASS.
+ok  github.com/CsBillChang/local-life-platform/internal/order  2.365s
+
+Full real dependency race regression:
+ok  internal/admission  1.753s
+ok  internal/auth  1.527s
+ok  internal/coupon  1.407s
+ok  internal/order  3.679s
+ok  internal/payment  1.553s
+ok  internal/platform/config  1.387s
+ok  internal/platform/mq  1.542s
+ok  internal/ratelimit  1.327s
+ok  internal/recovery  2.364s
+ok  internal/shop  1.560s

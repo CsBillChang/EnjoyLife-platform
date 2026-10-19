@@ -1,0 +1,143 @@
+File: api
+Type: delay
+Time: 2026-09-22 21:02:20 CST
+Duration: 30.01s, Total samples = 1689.16ms ( 5.63%)
+Showing nodes accounting for 1689.16ms, 100% of 1689.16ms total
+Dropped 220 nodes (cum <= 8.45ms)
+      flat  flat%   sum%        cum   cum%
+  844.97ms 50.02% 50.02%   844.97ms 50.02%  runtime.unlock (partial-inline)
+  751.63ms 44.50% 94.52%   751.70ms 44.50%  sync.(*Mutex).Unlock (partial-inline)
+   92.56ms  5.48%   100%    92.56ms  5.48%  runtime._LostContendedRuntimeLock
+         0     0%   100%    25.28ms  1.50%  bufio.(*Writer).Flush
+         0     0%   100%     8.82ms  0.52%  context.(*cancelCtx).Done
+         0     0%   100%    23.02ms  1.36%  database/sql.(*DB).addDep
+         0     0%   100%    25.97ms  1.54%  database/sql.(*DB).conn
+         0     0%   100%    49.06ms  2.90%  database/sql.(*DB).retry
+         0     0%   100%    17.96ms  1.06%  database/sql.(*Rows).awaitDone
+         0     0%   100%     8.82ms  0.52%  database/sql.(*Rows).initContextClose.gowrap1
+         0     0%   100%    49.06ms  2.90%  database/sql.(*Stmt).QueryContext
+         0     0%   100%    49.06ms  2.90%  database/sql.(*Stmt).QueryContext.func1
+         0     0%   100%    25.97ms  1.54%  database/sql.(*Stmt).connStmt
+         0     0%   100%    14.80ms  0.88%  encoding/json.Marshal
+         0     0%   100%    13.50ms   0.8%  encoding/json.newEncodeState
+         0     0%   100%    15.85ms  0.94%  fmt.Sprintf
+         0     0%   100%    15.85ms  0.94%  fmt.newPrinter
+         0     0%   100%    17.94ms  1.06%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0%   100%    60.87ms  3.60%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0%   100%    47.88ms  2.83%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0%   100%    60.99ms  3.61%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0%   100%    57.97ms  3.43%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+         0     0%   100%    31.71ms  1.88%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID-fm
+         0     0%   100%    47.46ms  2.81%  github.com/CsBillChang/local-life-platform/internal/shop.(*MySQLRepository).FindByID
+         0     0%   100%    17.94ms  1.06%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+         0     0%   100%    15.86ms  0.94%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+         0     0%   100%    18.47ms  1.09%  github.com/dgraph-io/ristretto/v2.(*defaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0%   100%    18.38ms  1.09%  github.com/dgraph-io/ristretto/v2.newDefaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }].gowrap1
+         0     0%   100%    20.49ms  1.21%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+         0     0%   100%    57.97ms  3.43%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0%   100%    20.42ms  1.21%  github.com/gin-gonic/gin.(*Context).Render
+         0     0%   100%    92.07ms  5.45%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+         0     0%   100%    57.97ms  3.43%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0%   100%    57.97ms  3.43%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+         0     0%   100%    20.42ms  1.21%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0%   100%    20.42ms  1.21%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0%   100%    60.87ms  3.60%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0%   100%    50.26ms  2.98%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0%   100%    47.88ms  2.83%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0%   100%    47.46ms  2.81%  gorm.io/gorm.(*DB).Take
+         0     0%   100%    41.79ms  2.47%  gorm.io/gorm.(*PreparedStmtDB).QueryContext
+         0     0%   100%    55.04ms  3.26%  gorm.io/gorm.(*processor).Execute
+         0     0%   100%    47.46ms  2.81%  gorm.io/gorm/callbacks.Query
+         0     0%   100%    12.47ms  0.74%  internal/poll.ignoringEINTRIO (inline)
+         0     0%   100%    24.96ms  1.48%  internal/runtime/maps.(*Map).growToSmall
+         0     0%   100%    24.96ms  1.48%  internal/runtime/maps.newGroups (inline)
+         0     0%   100%    24.96ms  1.48%  internal/runtime/maps.newarray
+         0     0%   100%    29.11ms  1.72%  net.(*conn).Read
+         0     0%   100%   656.51ms 38.87%  net/http.(*Server).Serve.gowrap3
+         0     0%   100%    19.37ms  1.15%  net/http.(*chunkWriter).Write
+         0     0%   100%    19.37ms  1.15%  net/http.(*chunkWriter).writeHeader
+         0     0%   100%   494.19ms 29.26%  net/http.(*conn).readRequest
+         0     0%   100%   764.11ms 45.24%  net/http.(*conn).serve
+         0     0%   100%   118.64ms  7.02%  net/http.(*connReader).abortPendingRead
+         0     0%   100%    37.63ms  2.23%  net/http.(*connReader).backgroundRead
+         0     0%   100%    26.43ms  1.56%  net/http.(*connReader).startBackgroundRead
+         0     0%   100%   145.08ms  8.59%  net/http.(*response).finishRequest
+         0     0%   100%    19.37ms  1.15%  net/http.Header.WriteSubset (inline)
+         0     0%   100%    19.37ms  1.15%  net/http.Header.sortedKeyValues
+         0     0%   100%    19.37ms  1.15%  net/http.Header.writeSubset
+         0     0%   100%    17.80ms  1.05%  net/http.newBufioWriterSize
+         0     0%   100%   382.61ms 22.65%  net/http.newTextprotoReader
+         0     0%   100%    54.25ms  3.21%  net/http.putTextprotoReader
+         0     0%   100%   456.72ms 27.04%  net/http.readRequest
+         0     0%   100%    92.07ms  5.45%  net/http.serverHandler.ServeHTTP
+         0     0%   100%    36.67ms  2.17%  runtime.(*mcache).nextFree
+         0     0%   100%    36.67ms  2.17%  runtime.(*mcache).refill
+         0     0%   100%    36.67ms  2.17%  runtime.(*mcentral).cacheSpan
+         0     0%   100%    36.67ms  2.17%  runtime.(*mcentral).grow
+         0     0%   100%    36.67ms  2.17%  runtime.(*mheap).alloc
+         0     0%   100%    36.67ms  2.17%  runtime.(*mheap).alloc.func1
+         0     0%   100%    36.67ms  2.17%  runtime.(*mheap).allocSpan
+         0     0%   100%    24.97ms  1.48%  runtime.(*mheap).freeSpan (inline)
+         0     0%   100%    24.97ms  1.48%  runtime.(*sweepLocked).sweep
+         0     0%   100%    24.97ms  1.48%  runtime.(*sweepLocked).sweep.(*mheap).freeSpan.func2
+         0     0%   100%    24.96ms  1.48%  runtime.bgsweep
+         0     0%   100%    40.66ms  2.41%  runtime.deductAssistCredit
+         0     0%   100%    54.23ms  3.21%  runtime.deferreturn
+         0     0%   100%    11.65ms  0.69%  runtime.entersyscall
+         0     0%   100%   529.07ms 31.32%  runtime.findRunnable
+         0     0%   100%    34.27ms  2.03%  runtime.forEachP (inline)
+         0     0%   100%    34.27ms  2.03%  runtime.forEachPInternal
+         0     0%   100%    40.66ms  2.41%  runtime.gcAssistAlloc
+         0     0%   100%    33.24ms  1.97%  runtime.gcBgMarkWorker
+         0     0%   100%    16.84ms     1%  runtime.gcBgMarkWorker.func2
+         0     0%   100%    16.74ms  0.99%  runtime.gcDrain
+         0     0%   100%    16.57ms  0.98%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0%   100%    16.55ms  0.98%  runtime.gcFlushBgCredit
+         0     0%   100%    37.57ms  2.22%  runtime.gcMarkDone
+         0     0%   100%    17.64ms  1.04%  runtime.gcMarkDone.forEachP.func5
+         0     0%   100%    16.70ms  0.99%  runtime.gcMarkTermination
+         0     0%   100%    16.63ms  0.98%  runtime.gcMarkTermination.forEachP.func7
+         0     0%   100%    18.97ms  1.12%  runtime.gcParkAssist
+         0     0%   100%    24.56ms  1.45%  runtime.gopreempt_m (inline)
+         0     0%   100%    15.72ms  0.93%  runtime.goready (inline)
+         0     0%   100%    28.96ms  1.71%  runtime.goschedImpl
+         0     0%   100%   260.31ms 15.41%  runtime.injectglist
+         0     0%   100%   224.27ms 13.28%  runtime.injectglist.func1
+         0     0%   100%    82.96ms  4.91%  runtime.mallocgc
+         0     0%   100%    41.65ms  2.47%  runtime.mallocgcSmallScanNoHeader
+         0     0%   100%    24.96ms  1.48%  runtime.mapassign_faststr
+         0     0%   100%   598.16ms 35.41%  runtime.mcall
+         0     0%   100%    23.28ms  1.38%  runtime.morestack
+         0     0%   100%     8.94ms  0.53%  runtime.mstart
+         0     0%   100%     8.94ms  0.53%  runtime.mstart0
+         0     0%   100%     8.94ms  0.53%  runtime.mstart1
+         0     0%   100%    24.96ms  1.48%  runtime.newarray
+         0     0%   100%    52.90ms  3.13%  runtime.newobject
+         0     0%   100%    26.31ms  1.56%  runtime.newproc
+         0     0%   100%    26.31ms  1.56%  runtime.newproc.func1
+         0     0%   100%    23.66ms  1.40%  runtime.newstack
+         0     0%   100%   581.86ms 34.45%  runtime.park_m
+         0     0%   100%    66.13ms  3.92%  runtime.parkunlock_c
+         0     0%   100%    15.76ms  0.93%  runtime.ready
+         0     0%   100%    14.85ms  0.88%  runtime.readyWithTime
+         0     0%   100%    14.85ms  0.88%  runtime.readyWithTime.goready.func1
+         0     0%   100%    11.65ms  0.69%  runtime.reentersyscall
+         0     0%   100%     8.51ms   0.5%  runtime.resetspinning
+         0     0%   100%    30.45ms  1.80%  runtime.runSafePointFn
+         0     0%   100%   537.83ms 31.84%  runtime.schedule
+         0     0%   100%    10.09ms   0.6%  runtime.selectgo
+         0     0%   100%    10.04ms  0.59%  runtime.selunlock
+         0     0%   100%     8.47ms   0.5%  runtime.stopm
+         0     0%   100%    24.96ms  1.48%  runtime.sweepone
+         0     0%   100%     8.94ms  0.53%  runtime.sysmon
+         0     0%   100%   174.25ms 10.32%  runtime.systemstack
+         0     0%   100%    75.79ms  4.49%  runtime.wakep
+         0     0%   100%    14.75ms  0.87%  sync.(*Cond).Broadcast
+         0     0%   100%   117.86ms  6.98%  sync.(*Cond).Wait
+         0     0%   100%   483.03ms 28.60%  sync.(*Pool).Get
+         0     0%   100%    56.61ms  3.35%  sync.(*Pool).Put
+         0     0%   100%   539.64ms 31.95%  sync.(*Pool).pin
+         0     0%   100%   539.64ms 31.95%  sync.(*Pool).pinSlow
+         0     0%   100%    14.75ms  0.87%  sync.runtime_notifyListNotifyAll
+         0     0%   100%    12.47ms  0.74%  syscall.syscall
+         0     0%   100%    12.47ms  0.74%  syscall.syscalln

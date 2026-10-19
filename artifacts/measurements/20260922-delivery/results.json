@@ -1,0 +1,32 @@
+{
+  "shop_query": {
+    "baseline_p95_median_microseconds": 14091,
+    "optimized_p95_median_microseconds": 2048,
+    "p95_reduction_percent": 85.5,
+    "baseline_throughput_median_rps": 17757.45535664739,
+    "optimized_throughput_median_rps": 94191.89243285883,
+    "throughput_ratio": 5.30,
+    "comparison_requests": 120000,
+    "http_errors": 0,
+    "transport_errors": 0,
+    "baseline_db_audit_prepared_statement_delta": 20000,
+    "optimized_db_audit_prepared_statement_delta": 1896,
+    "optimized_db_audit_backend_load_delta": 1708
+  },
+  "async_purchase": {
+    "accepted": 500,
+    "succeeded": 500,
+    "failed": 0,
+    "unfinished": 0,
+    "p50_microseconds": 3004605,
+    "p95_microseconds": 3927459,
+    "p99_microseconds": 4204070,
+    "orders": 500,
+    "distinct_users": 500,
+    "deduct_movements": 500,
+    "duplicate_user_activity_orders": 0,
+    "outbox_sent": 500,
+    "rabbit_ready": 0,
+    "rabbit_unacknowledged": 0
+  }
+}

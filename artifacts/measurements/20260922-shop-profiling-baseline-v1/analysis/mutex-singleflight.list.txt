@@ -1,0 +1,31 @@
+Total: 1.69s
+ROUTINE ======================== golang.org/x/sync/singleflight.(*Group).Do in /Users/csbillchang/go/pkg/mod/golang.org/x/sync@v0.23.0/singleflight/singleflight.go
+         0    60.87ms (flat, cum)  3.60% of Total
+         .          .     91:func (g *Group) Do(key string, fn func() (any, error)) (v any, err error, shared bool) {
+         .          .     92:	g.mu.Lock()
+         .          .     93:	if g.m == nil {
+         .          .     94:		g.m = make(map[string]*call)
+         .          .     95:	}
+         .          .     96:	if c, ok := g.m[key]; ok {
+         .          .     97:		c.dups++
+         .    10.62us     98:		g.mu.Unlock()
+         .          .     99:		c.wg.Wait()
+         .          .    100:
+         .          .    101:		if e, ok := c.err.(*panicError); ok {
+         .          .    102:			panic(e)
+         .          .    103:		} else if c.err == errGoexit {
+         .          .    104:			runtime.Goexit()
+         .          .    105:		}
+         .          .    106:		return c.val, c.err, true
+         .          .    107:	}
+         .          .    108:	c := new(call)
+         .          .    109:	c.wg.Add(1)
+         .          .    110:	g.m[key] = c
+         .    10.60ms    111:	g.mu.Unlock()
+         .          .    112:
+         .    50.26ms    113:	g.doCall(c, key, fn)
+         .          .    114:	return c.val, c.err, c.dups > 0
+         .          .    115:}
+         .          .    116:
+         .          .    117:// DoChan is like Do but returns a channel that will receive the
+         .          .    118:// results when they are ready.

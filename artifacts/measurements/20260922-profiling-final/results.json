@@ -1,0 +1,59 @@
+{
+  "run_id": "20260922-profiling-final",
+  "scope": "final pprof evidence acceptance",
+  "sampling": {
+    "target": "API process serving two-level cached GET /shops/:id",
+    "warmup_seconds": 10,
+    "load_seconds": 45,
+    "profile_seconds": 30,
+    "concurrency": 100,
+    "profile_window_inside_load_window": true,
+    "mutex_fraction": 1,
+    "block_rate_nanoseconds": 1000000,
+    "diagnostic_defaults_enabled": false
+  },
+  "lock_analysis": {
+    "mutex_delay_milliseconds": 1689.16,
+    "mutex_wall_seconds": 30.01,
+    "singleflight_share_percent": 3.60,
+    "decision": "no material project-owned lock hotspot; no lock optimization"
+  },
+  "allocation_optimization": {
+    "change": "shop detail success response gin.H to typed struct",
+    "microbenchmark_allocs_per_op_before": 25,
+    "microbenchmark_allocs_per_op_after": 20,
+    "microbenchmark_bytes_per_op_reduction_percent": 6.2,
+    "heap_round_bytes_per_response_before": 2934.646547151146,
+    "heap_round_bytes_per_response_after": 2515.01517842242,
+    "heap_round_bytes_per_response_change_percent": -14.299213277867818,
+    "heap_round_mallocs_per_response_before": 29.33809183428947,
+    "heap_round_mallocs_per_response_after": 24.27404890587267,
+    "heap_round_mallocs_per_response_change_percent": -17.260982605890206
+  },
+  "diagnostics_off_http_comparison": {
+    "rounds_per_binary": 3,
+    "round_seconds": 60,
+    "concurrency": 100,
+    "complete_http_200": 13545409,
+    "errors": 0,
+    "median_p95_milliseconds_before": 4.902,
+    "median_p95_milliseconds_after": 4.894,
+    "median_throughput_rps_before": 40415.54,
+    "median_throughput_rps_after": 39826.50,
+    "decision": "no material latency or throughput improvement claim"
+  },
+  "regression": {
+    "go_test_all": "pass",
+    "go_test_race_all": "pass",
+    "go_vet_all": "pass",
+    "real_dependency_race_internal": "pass",
+    "docker_services": ["mysql healthy", "redis healthy", "rabbitmq healthy"]
+  },
+  "limitations": [
+    "single-host local Docker result, not production capacity",
+    "mutex profile is not a MySQL row-lock metric",
+    "block time is goroutine-summed and is not request wall latency",
+    "heap and RSS observations do not prove a memory-leak fix",
+    "the allocation optimization did not produce a stable HTTP P95 or throughput improvement"
+  ]
+}

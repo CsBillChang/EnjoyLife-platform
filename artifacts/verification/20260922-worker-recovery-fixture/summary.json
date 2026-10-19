@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-09-22T11:47:54.521316Z",
+  "finished_at": "2026-09-22T11:47:54.640822Z",
+  "activity_id": 204,
+  "requests": 1,
+  "concurrency": 1,
+  "timeout": "2m0s",
+  "http_status": {
+    "202": 1
+  },
+  "terminal_status": {
+    "SUCCEEDED": 1
+  },
+  "failures": {},
+  "unfinished": 0,
+  "exact_failure_times_unavailable": 0,
+  "terminal_poll_errors": 0,
+  "accepted_to_order_row_created_us": {
+    "count": 1,
+    "p50": 75886,
+    "p95": 75886,
+    "p99": 75886
+  },
+  "accepted_to_terminal_observed_us": {
+    "count": 1,
+    "p50": 91323,
+    "p95": 91323,
+    "p99": 91323
+  }
+}

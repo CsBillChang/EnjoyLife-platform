@@ -1,0 +1,63 @@
+File: api
+Type: inuse_objects
+Time: 2026-09-22 21:17:45 CST
+Showing nodes accounting for 92079, 98.73% of 93263 total
+Dropped 32 nodes (cum <= 466)
+      flat  flat%   sum%        cum   cum%
+     49153 52.70% 52.70%      49153 52.70%  syscall.anyToSockaddr
+     32768 35.14% 87.84%      32768 35.14%  reflect.unsafe_New
+      4681  5.02% 92.86%       4681  5.02%  context.(*cancelCtx).Done
+      3277  3.51% 96.37%       4766  5.11%  regexp.compile
+      1489  1.60% 97.97%       1489  1.60%  regexp/syntax.(*compiler).inst (inline)
+       711  0.76% 98.73%        711  0.76%  runtime.mallocgc
+         0     0% 98.73%      32768 35.14%  database/sql.(*Rows).Scan
+         0     0% 98.73%      32768 35.14%  database/sql.(*Rows).scanLocked
+         0     0% 98.73%      32768 35.14%  database/sql.convertAssignRows
+         0     0% 98.73%      32768 35.14%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0% 98.73%      32768 35.14%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0% 98.73%      32768 35.14%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0% 98.73%      32768 35.14%  github.com/CsBillChang/local-life-platform/internal/shop.(*MySQLRepository).FindByID
+         0     0% 98.73%       4766  5.11%  github.com/jinzhu/inflection.compile
+         0     0% 98.73%       4766  5.11%  github.com/jinzhu/inflection.init.0
+         0     0% 98.73%      49153 52.70%  github.com/redis/go-redis/v9.(*Options).init.NewDialer.func1
+         0     0% 98.73%      49153 52.70%  github.com/redis/go-redis/v9.(*baseClient).dial
+         0     0% 98.73%      49153 52.70%  github.com/redis/go-redis/v9.(*hooksMixin).dialHook
+         0     0% 98.73%      49153 52.70%  github.com/redis/go-redis/v9.newConnPool.func1
+         0     0% 98.73%      49351 52.92%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).dialConn
+         0     0% 98.73%      49351 52.92%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).newConn
+         0     0% 98.73%      49351 52.92%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).queuedNewConn.func2
+         0     0% 98.73%      32768 35.14%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0% 98.73%      32768 35.14%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0% 98.73%      32768 35.14%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0% 98.73%      32768 35.14%  gorm.io/gorm.(*DB).Take
+         0     0% 98.73%      32768 35.14%  gorm.io/gorm.(*DB).scanIntoStruct
+         0     0% 98.73%      32768 35.14%  gorm.io/gorm.(*processor).Execute
+         0     0% 98.73%      32768 35.14%  gorm.io/gorm.Scan
+         0     0% 98.73%      32768 35.14%  gorm.io/gorm/callbacks.Query
+         0     0% 98.73%      49153 52.70%  net.(*Dialer).DialContext
+         0     0% 98.73%      49153 52.70%  net.(*netFD).connect
+         0     0% 98.73%      49153 52.70%  net.(*netFD).dial
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).dialParallel
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).dialSerial
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).dialSingle
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).dialTCP
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).doDialTCP (inline)
+         0     0% 98.73%      49153 52.70%  net.(*sysDialer).doDialTCPProto
+         0     0% 98.73%      49153 52.70%  net.internetSocket
+         0     0% 98.73%      49153 52.70%  net.socket
+         0     0% 98.73%        711  0.76%  net/http.(*conn).serve
+         0     0% 98.73%       4681  5.02%  os/signal.NotifyContext.func1
+         0     0% 98.73%      32768 35.14%  reflect.New
+         0     0% 98.73%       4766  5.11%  regexp.Compile (inline)
+         0     0% 98.73%       4766  5.11%  regexp.MustCompile
+         0     0% 98.73%       1117  1.20%  regexp/syntax.(*compiler).compile
+         0     0% 98.73%        745   0.8%  regexp/syntax.(*compiler).empty (inline)
+         0     0% 98.73%       1489  1.60%  regexp/syntax.Compile
+         0     0% 98.73%        711  0.76%  runtime.allocm
+         0     0% 98.73%       4785  5.13%  runtime.doInit (inline)
+         0     0% 98.73%       4785  5.13%  runtime.doInit1
+         0     0% 98.73%       4785  5.13%  runtime.main
+         0     0% 98.73%        711  0.76%  runtime.newm
+         0     0% 98.73%        711  0.76%  runtime.startm
+         0     0% 98.73%        711  0.76%  runtime.wakep
+         0     0% 98.73%      49153 52.70%  syscall.Getpeername

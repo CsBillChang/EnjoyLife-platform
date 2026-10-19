@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-09-22T10:30:47.002951Z",
+  "finished_at": "2026-09-22T10:32:13.838601Z",
+  "activity_id": 200,
+  "requests": 500,
+  "concurrency": 100,
+  "timeout": "2m0s",
+  "http_status": {
+    "202": 500
+  },
+  "terminal_status": {
+    "UNFINISHED": 500
+  },
+  "failures": {},
+  "unfinished": 500,
+  "exact_failure_times_unavailable": 0,
+  "order_created_latency_us": {
+    "count": 0
+  }
+}

@@ -1,0 +1,7 @@
+a5ffb5495d58ceffdf0016659381dc61118fcf76103c19ceceeb6bd74c6a76fc  README.md
+ecf1f8991db3ff9dbd170ca21091b792a8c3aea6e8415add1e23ee44ff152cfa  results.json
+a8a1229b8c9c8ccacb290d94e2b85be216823f72d78e346d446dd33c7db3ed67  source-manifest.sha256
+b63cd274a8442cfeeeaccb2243878ddc37f1b3b8fa7c419fa1c379f8250b456b  ../20260922-shop-profiling-baseline-v1/summary.json
+1b5850bdae96d8f04839b32b7f4c6e4a6aad12fa0a6af7a1444cd20ca88a6df3  ../20260922-shop-profiling-typed-v1/summary.json
+ad46d42eab82d21c284f1f6f40e46f5b4fc29691acb4c590fe662533cf6b0c4b  ../20260922-shop-detail-response-optimization/summary.json
+aa16579de72773442692b5ef53b5b2323801236f983404f4bf3638df0c499127  ../20260922-shop-detail-response-comparison-v1/summary.json

@@ -1,0 +1,16 @@
+File: api
+Type: contentions
+Time: 2026-09-22 21:03:18 CST
+Duration: 30s, Total samples = 867410 
+Showing nodes accounting for 866429, 99.89% of 867410 total
+Dropped 124 nodes (cum <= 4337)
+      flat  flat%   sum%        cum   cum%
+    846890 97.63% 97.63%     846890 97.63%  sync.(*Cond).Wait
+     19539  2.25% 99.89%      19539  2.25%  runtime.selectgo
+         0     0% 99.89%      12721  1.47%  github.com/dgraph-io/ristretto/v2.(*defaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0% 99.89%      12721  1.47%  github.com/dgraph-io/ristretto/v2.newDefaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }].gowrap1
+         0     0% 99.89%       4844  0.56%  github.com/go-sql-driver/mysql.(*mysqlConn).startWatcher.func1
+         0     0% 99.89%     847138 97.66%  net/http.(*Server).Serve.gowrap3
+         0     0% 99.89%     847138 97.66%  net/http.(*conn).serve
+         0     0% 99.89%     846890 97.63%  net/http.(*connReader).abortPendingRead
+         0     0% 99.89%     846890 97.63%  net/http.(*response).finishRequest

@@ -1,0 +1,30 @@
+{
+  "run_id": "20260922-shop-profiling-typed-v1",
+  "scenario": "typed shop detail response under the same profiling load",
+  "profiles": ["allocs", "heap"],
+  "validity": {
+    "profile_windows_fully_inside_load_windows": true,
+    "all_load_responses_http_200": true,
+    "transport_read_close_incomplete_errors": 0
+  },
+  "allocs_observation": {
+    "json_map_encoder_stack_present": false,
+    "note": "total 30-second allocation is not compared directly because completed throughput differed"
+  },
+  "heap_round": {
+    "completed_responses": 1402122,
+    "total_alloc_delta_bytes": 3526358112,
+    "malloc_delta": 34035178,
+    "bytes_per_completed_response": 2515.01517842242,
+    "mallocs_per_completed_response": 24.27404890587267,
+    "forced_gc_heap_alloc_delta_bytes": 193488,
+    "forced_gc_heap_objects_delta": 828,
+    "rss_before_kib": 40816,
+    "rss_after_kib": 23568,
+    "memory_leak_conclusion": "not supported"
+  },
+  "normalized_change_from_baseline_percent": {
+    "bytes_per_completed_response": -14.299213277867818,
+    "mallocs_per_completed_response": -17.260982605890206
+  }
+}

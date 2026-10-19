@@ -1,0 +1,15 @@
+Total: 1.69s
+ROUTINE ======================== github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID in /Users/csbillchang/code/项目/local-life-platform/internal/shop/cache.go
+         0    17.94ms (flat, cum)  1.06% of Total
+         .          .    177:func (r *CachedRepository) FindByID(ctx context.Context, id int64) (Shop, error) {
+         .          .    178:	if err := ctx.Err(); err != nil {
+         .          .    179:		return Shop{}, err
+         .          .    180:	}
+         .    15.86ms    181:	key := shopCacheKey(id)
+         .          .    182:	now := r.config.Now()
+         .     2.08ms    183:	if value, ok := r.l1.Get(key); ok {
+         .          .    184:		if item, hit, stale := r.readEnvelope(value, now); hit {
+         .          .    185:			r.metrics.l1Hit.Add(1)
+         .          .    186:			if value.NotFound {
+         .          .    187:				r.metrics.negativeHit.Add(1)
+         .          .    188:				return Shop{}, ErrShopNotFound

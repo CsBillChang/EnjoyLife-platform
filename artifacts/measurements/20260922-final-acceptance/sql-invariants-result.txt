@@ -1,0 +1,19 @@
+Activity 203 immediately after the async measurement:
+- purchase_requests: 500 SUCCEEDED
+- orders: 500 total, 500 distinct users, 500 distinct request_ids
+- inventory_movements: 500 DEDUCT, SUM(delta)=-500
+- activity stock: total=500, available=0
+- outbox: 500 SENT
+- RabbitMQ purchase-orders: ready=0, unacknowledged=0
+
+Activity 204 worker recovery fixture:
+- order 2262: CLOSED
+- activity stock: total=1, available=1
+- inventory movements: 2 total, exactly 1 RELEASE, SUM(delta)=0
+- ADMISSION_STOCK_RESTORE task 1554: SUCCEEDED after 1 attempt
+- Redis generation 1 stock: 1
+- original user marker remains S:<request_id>; close did not restore purchase eligibility
+
+Preserved-data upgrade observation:
+- 1500 PENDING and 1 expired/recoverable RUNNING stock-restore tasks belong to old Redis generations without the new releases sentinel.
+- They fail closed and require per-activity fenced rebuild; no data or volumes were deleted.

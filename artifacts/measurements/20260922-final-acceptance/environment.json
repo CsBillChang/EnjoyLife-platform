@@ -1,0 +1,39 @@
+{
+  "run_id": "20260922-final-acceptance",
+  "host_os": "Darwin 27.0",
+  "host_architecture": "arm64",
+  "cpu_model_and_cores": "Apple M2, 8 cores",
+  "memory_bytes": 8589934592,
+  "go_version": "go1.26.4 darwin/arm64",
+  "docker_version": "29.7.2",
+  "compose_version": "5.5.1",
+  "image_digests": {
+    "mysql:8.4": "sha256:3466ba4a4828aa8d46fb7c3bc16b67b781c98413cf4ea0fac6feaa6e881faa26",
+    "redis:7.4-alpine": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+    "rabbitmq:4.1-management-alpine": "sha256:6fb3095d1d579e11639d9033c9ded1287ca085664c97e9305ffc2a26cee433f5"
+  },
+  "service_versions": {
+    "mysql": "8.4.11",
+    "redis": "7.4.11",
+    "rabbitmq": "4.1.8"
+  },
+  "service_config_nonsecret": {
+    "compose_project": "huixiang-life",
+    "mysql_port": 13306,
+    "redis_port": 16379,
+    "rabbitmq_amqp_port": 15672,
+    "rabbitmq_management_port": 15673,
+    "worker_count": 4,
+    "prefetch": 4,
+    "shop_query_concurrency": 100,
+    "shop_query_round_seconds": 60,
+    "shop_query_warmup_seconds": 10
+  },
+  "container_cpu_memory_limits": "not configured",
+  "database_pool": {
+    "max_open": 20,
+    "max_idle": 10,
+    "max_idle_time": "5m",
+    "max_lifetime": "30m"
+  }
+}

@@ -1,0 +1,31 @@
+File: api
+Type: inuse_objects
+Time: 2026-09-22 21:17:45 CST
+Showing nodes accounting for -33223, 99.62% of 33351 total
+Dropped 8 nodes (cum <= 166)
+      flat  flat%   sum%        cum   cum%
+    -32768 98.25% 98.25%     -32768 98.25%  reflect.unsafe_New
+      -455  1.36% 99.62%       -455  1.36%  internal/poll.runtime_pollSetDeadline
+         0     0% 99.62%     -32768 98.25%  database/sql.(*Rows).Scan
+         0     0% 99.62%     -32768 98.25%  database/sql.(*Rows).scanLocked
+         0     0% 99.62%     -32768 98.25%  database/sql.convertAssignRows
+         0     0% 99.62%     -32640 97.87%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0% 99.62%     -32640 97.87%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0% 99.62%     -32640 97.87%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0% 99.62%     -32640 97.87%  github.com/CsBillChang/local-life-platform/internal/shop.(*MySQLRepository).FindByID
+         0     0% 99.62%     -32640 97.87%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0% 99.62%     -32640 97.87%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0% 99.62%     -32640 97.87%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0% 99.62%     -32640 97.87%  gorm.io/gorm.(*DB).Take
+         0     0% 99.62%     -32768 98.25%  gorm.io/gorm.(*DB).scanIntoStruct
+         0     0% 99.62%     -32640 97.87%  gorm.io/gorm.(*processor).Execute
+         0     0% 99.62%     -32768 98.25%  gorm.io/gorm.Scan
+         0     0% 99.62%     -32640 97.87%  gorm.io/gorm/callbacks.Query
+         0     0% 99.62%       -455  1.36%  internal/poll.(*FD).SetWriteDeadline (inline)
+         0     0% 99.62%       -455  1.36%  internal/poll.setDeadlineImpl
+         0     0% 99.62%       -455  1.36%  net.(*conn).SetWriteDeadline
+         0     0% 99.62%       -455  1.36%  net.(*netFD).SetWriteDeadline (inline)
+         0     0% 99.62%       -455  1.36%  net/http.(*conn).readRequest
+         0     0% 99.62%       -455  1.36%  net/http.(*conn).readRequest.func1
+         0     0% 99.62%       -455  1.36%  net/http.(*conn).serve
+         0     0% 99.62%     -32768 98.25%  reflect.New

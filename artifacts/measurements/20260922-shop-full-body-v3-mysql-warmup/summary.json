@@ -1,0 +1,35 @@
+{
+  "run_id": "mysql-warmup",
+  "base_url": "http://127.0.0.1:18080",
+  "requests": 169564,
+  "concurrency": 100,
+  "first_shop_id": 1000001,
+  "shop_count": 10000,
+  "hot_shop_count": 100,
+  "hot_percent": 80,
+  "load_mode": "fixed_duration",
+  "requested_duration_seconds": 10,
+  "elapsed_milliseconds": 10022,
+  "attempted_requests_per_second": 16917.541253617503,
+  "completed_requests": 169564,
+  "incomplete_requests": 0,
+  "completed_requests_per_second": 16917.541253617503,
+  "all_completed": {
+    "count": 169564,
+    "p50_microseconds": 4405,
+    "p95_microseconds": 15216,
+    "p99_microseconds": 23442
+  },
+  "successful_200": {
+    "count": 169564,
+    "p50_microseconds": 4405,
+    "p95_microseconds": 15216,
+    "p99_microseconds": 23442
+  },
+  "http_statuses": {
+    "200": 169564
+  },
+  "transport_errors": 0,
+  "response_read_errors": 0,
+  "response_close_errors": 0
+}

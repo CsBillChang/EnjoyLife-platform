@@ -1,0 +1,102 @@
+File: api
+Type: contentions
+Time: 2026-09-22 21:02:20 CST
+Duration: 30.01s, Total samples = 22681 
+Showing nodes accounting for 22681, 100% of 22681 total
+Dropped 261 nodes (cum <= 113)
+      flat  flat%   sum%        cum   cum%
+     19951 87.96% 87.96%      19951 87.96%  runtime.unlock (partial-inline)
+      1421  6.27% 94.23%       1421  6.27%  runtime._LostContendedRuntimeLock
+      1309  5.77%   100%       1312  5.78%  sync.(*Mutex).Unlock
+         0     0%   100%        144  0.63%  bufio.(*Reader).Peek
+         0     0%   100%        144  0.63%  bufio.(*Reader).fill
+         0     0%   100%        118  0.52%  bufio.(*Writer).Flush
+         0     0%   100%        205   0.9%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0%   100%        173  0.76%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0%   100%        207  0.91%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0%   100%        166  0.73%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+         0     0%   100%        165  0.73%  github.com/CsBillChang/local-life-platform/internal/shop.(*MySQLRepository).FindByID
+         0     0%   100%        166  0.73%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0%   100%        206  0.91%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+         0     0%   100%        166  0.73%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0%   100%        166  0.73%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+         0     0%   100%        205   0.9%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0%   100%        188  0.83%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0%   100%        173  0.76%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0%   100%        165  0.73%  gorm.io/gorm.(*DB).Take
+         0     0%   100%        168  0.74%  gorm.io/gorm.(*processor).Execute
+         0     0%   100%        165  0.73%  gorm.io/gorm/callbacks.Query
+         0     0%   100%        155  0.68%  internal/poll.(*FD).Read
+         0     0%   100%        244  1.08%  internal/poll.ignoringEINTRIO (inline)
+         0     0%   100%        486  2.14%  net.(*conn).Read
+         0     0%   100%        155  0.68%  net.(*netFD).Read
+         0     0%   100%       1078  4.75%  net/http.(*Server).Serve.gowrap3
+         0     0%   100%        742  3.27%  net/http.(*conn).readRequest
+         0     0%   100%       2083  9.18%  net/http.(*conn).serve
+         0     0%   100%        144  0.63%  net/http.(*connReader).Read
+         0     0%   100%        581  2.56%  net/http.(*connReader).abortPendingRead
+         0     0%   100%        483  2.13%  net/http.(*connReader).backgroundRead
+         0     0%   100%        280  1.23%  net/http.(*connReader).startBackgroundRead
+         0     0%   100%        704  3.10%  net/http.(*response).finishRequest
+         0     0%   100%        335  1.48%  net/http.newTextprotoReader
+         0     0%   100%        640  2.82%  net/http.readRequest
+         0     0%   100%        206  0.91%  net/http.serverHandler.ServeHTTP
+         0     0%   100%        338  1.49%  runtime.checkRunqsNoP
+         0     0%   100%        633  2.79%  runtime.deductAssistCredit
+         0     0%   100%        223  0.98%  runtime.entersyscall
+         0     0%   100%      15128 66.70%  runtime.findRunnable
+         0     0%   100%        798  3.52%  runtime.forEachP (inline)
+         0     0%   100%        798  3.52%  runtime.forEachPInternal
+         0     0%   100%        633  2.79%  runtime.gcAssistAlloc
+         0     0%   100%        685  3.02%  runtime.gcBgMarkWorker
+         0     0%   100%        248  1.09%  runtime.gcBgMarkWorker.func2
+         0     0%   100%        247  1.09%  runtime.gcDrain
+         0     0%   100%        238  1.05%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0%   100%        245  1.08%  runtime.gcFlushBgCredit
+         0     0%   100%        846  3.73%  runtime.gcMarkDone
+         0     0%   100%        275  1.21%  runtime.gcMarkDone.forEachP.func5
+         0     0%   100%        526  2.32%  runtime.gcMarkTermination
+         0     0%   100%        523  2.31%  runtime.gcMarkTermination.forEachP.func7
+         0     0%   100%        219  0.97%  runtime.gcParkAssist
+         0     0%   100%        125  0.55%  runtime.gcstopm
+         0     0%   100%        357  1.57%  runtime.gopreempt_m (inline)
+         0     0%   100%        178  0.78%  runtime.goready (inline)
+         0     0%   100%        392  1.73%  runtime.goschedImpl
+         0     0%   100%        128  0.56%  runtime.incidlelocked
+         0     0%   100%       9376 41.34%  runtime.injectglist
+         0     0%   100%       9126 40.24%  runtime.injectglist.func1
+         0     0%   100%        747  3.29%  runtime.mallocgc
+         0     0%   100%      17267 76.13%  runtime.mcall
+         0     0%   100%        335  1.48%  runtime.morestack
+         0     0%   100%        155  0.68%  runtime.mstart
+         0     0%   100%        155  0.68%  runtime.mstart0
+         0     0%   100%        155  0.68%  runtime.mstart1
+         0     0%   100%        588  2.59%  runtime.newobject
+         0     0%   100%        276  1.22%  runtime.newproc
+         0     0%   100%        276  1.22%  runtime.newproc.func1
+         0     0%   100%        336  1.48%  runtime.newstack
+         0     0%   100%      17055 75.20%  runtime.park_m
+         0     0%   100%       2045  9.02%  runtime.parkunlock_c
+         0     0%   100%        179  0.79%  runtime.ready
+         0     0%   100%        143  0.63%  runtime.readyWithTime
+         0     0%   100%        143  0.63%  runtime.readyWithTime.goready.func1
+         0     0%   100%        223  0.98%  runtime.reentersyscall
+         0     0%   100%        185  0.82%  runtime.resetspinning
+         0     0%   100%        128  0.56%  runtime.retake
+         0     0%   100%        503  2.22%  runtime.runSafePointFn
+         0     0%   100%      15318 67.54%  runtime.schedule
+         0     0%   100%        128  0.56%  runtime.stopTheWorldWithSema
+         0     0%   100%        221  0.97%  runtime.stopm
+         0     0%   100%        155  0.68%  runtime.sysmon
+         0     0%   100%       1901  8.38%  runtime.systemstack
+         0     0%   100%        773  3.41%  runtime.wakep
+         0     0%   100%        141  0.62%  sync.(*Cond).Broadcast
+         0     0%   100%        549  2.42%  sync.(*Cond).Wait
+         0     0%   100%        500  2.20%  sync.(*Pool).Get
+         0     0%   100%        540  2.38%  sync.(*Pool).pin
+         0     0%   100%        540  2.38%  sync.(*Pool).pinSlow
+         0     0%   100%        141  0.62%  sync.runtime_notifyListNotifyAll
+         0     0%   100%        155  0.68%  syscall.Read (inline)
+         0     0%   100%        155  0.68%  syscall.read
+         0     0%   100%        244  1.08%  syscall.syscall
+         0     0%   100%        244  1.08%  syscall.syscalln

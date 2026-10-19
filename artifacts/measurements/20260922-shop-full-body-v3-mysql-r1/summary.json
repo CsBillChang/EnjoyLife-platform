@@ -1,0 +1,35 @@
+{
+  "run_id": "mysql-full-body-r1",
+  "base_url": "http://127.0.0.1:18080",
+  "requests": 1012417,
+  "concurrency": 100,
+  "first_shop_id": 1000001,
+  "shop_count": 10000,
+  "hot_shop_count": 100,
+  "hot_percent": 80,
+  "load_mode": "fixed_duration",
+  "requested_duration_seconds": 60,
+  "elapsed_milliseconds": 60132,
+  "attempted_requests_per_second": 16836.471003564086,
+  "completed_requests": 1012417,
+  "incomplete_requests": 0,
+  "completed_requests_per_second": 16836.471003564086,
+  "all_completed": {
+    "count": 1012417,
+    "p50_microseconds": 4472,
+    "p95_microseconds": 15221,
+    "p99_microseconds": 23308
+  },
+  "successful_200": {
+    "count": 1012417,
+    "p50_microseconds": 4472,
+    "p95_microseconds": 15221,
+    "p99_microseconds": 23308
+  },
+  "http_statuses": {
+    "200": 1012417
+  },
+  "transport_errors": 0,
+  "response_read_errors": 0,
+  "response_close_errors": 0
+}

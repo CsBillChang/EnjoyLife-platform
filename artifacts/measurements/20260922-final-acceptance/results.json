@@ -1,0 +1,47 @@
+{
+  "shop_query": {
+    "metric_boundary": "before client GET until response body is fully read and closed",
+    "dataset": {"shops": 10000, "hot_shops": 100, "hot_percent": 80},
+    "load": {"warmup_seconds": 10, "round_seconds": 60, "rounds": 3, "concurrency": 100},
+    "mysql_only": {
+      "samples": [1012417, 508801, 380041],
+      "p95_milliseconds": [15.221, 33.427, 41.800],
+      "throughput_rps": [16836.47, 8456.83, 6323.14]
+    },
+    "two_level": {
+      "samples": [2493324, 2102447, 1428494],
+      "p95_milliseconds": [4.741, 5.179, 9.669],
+      "throughput_rps": [41142.41, 34107.53, 23683.33],
+      "measurement_window_backend_load_attempts": 11451,
+      "measurement_window_l1_hits": 6024265,
+      "refresh_errors": 24,
+      "refresh_drops": 20372
+    },
+    "median_comparison": {
+      "p95_reduction_percent": 84.51,
+      "throughput_ratio": 4.03
+    },
+    "http_200_samples": 7925524,
+    "transport_errors": 0,
+    "response_read_errors": 0,
+    "response_close_errors": 0,
+    "incomplete_requests": 0
+  },
+  "async_purchase": {
+    "activity_id": 203,
+    "requests": 500,
+    "concurrency": 100,
+    "http_202": 500,
+    "succeeded": 500,
+    "failed": 0,
+    "unfinished": 0,
+    "terminal_poll_errors": 0,
+    "accepted_to_order_row_created_seconds": {"p50": 3.258310, "p95": 4.096050, "p99": 4.442061},
+    "accepted_to_first_terminal_observed_seconds": {"p50": 3.813779, "p95": 5.147043, "p99": 5.235335},
+    "note": "Neither metric is exact transaction commit-return latency. HTTP 202 is not order completion."
+  },
+  "pprof": {
+    "cpu_sample_milliseconds": 40,
+    "decision": "insufficient evidence; no additional CPU optimization claim"
+  }
+}

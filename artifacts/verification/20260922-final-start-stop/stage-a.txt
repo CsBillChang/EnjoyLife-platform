@@ -1,0 +1,12 @@
+PASS health: HTTP 200
+PASS shop-list: HTTP 200
+PASS shop-not-found: HTTP 404
+PASS invalid-pagination: HTTP 400
+PASS wrong-password: HTTP 401
+PASS customer-login: HTTP 200
+PASS authenticated-me: HTTP 200
+PASS customer-cannot-update-shop: HTTP 403
+PASS merchant-login: HTTP 200
+PASS merchant-updates-owned-shop: HTTP 200
+PASS merchant-cannot-update-other-shop: HTTP 404
+Stage A HTTP verification passed; bearer tokens were not printed.

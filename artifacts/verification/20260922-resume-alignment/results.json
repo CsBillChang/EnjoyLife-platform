@@ -1,0 +1,30 @@
+{
+  "run_id": "20260922-resume-alignment",
+  "date": "2026-09-22",
+  "environment": {
+    "os": "macOS 27.0",
+    "arch": "arm64",
+    "go": "go1.26.4 darwin/arm64",
+    "docker": "29.7.2/29.7.2",
+    "compose": "v5.5.1",
+    "compose_project": "huixiang-life"
+  },
+  "checks": {
+    "go_test_all": "pass",
+    "go_test_race_all": "pass",
+    "go_vet_all": "pass",
+    "integration_race_internal_all": "pass",
+    "migration_repeat": "pass",
+    "api_start_health_activity_routes_stop": "pass",
+    "worker_start_stop": "pass_with_preserved_old_generation_deferred_tasks"
+  },
+  "performance_rerun": false,
+  "performance_scope": "Existing shop-detail and pprof evidence retained; new coupon path has correctness evidence only.",
+  "known_limitations": [
+    "Preserved legacy Redis generations require fenced rebuild; incomplete state fails closed.",
+    "Coupon cache uses fixed 30s TTL and 10s negative TTL without jitter or Pub/Sub.",
+    "Cross-instance L1 invalidation is TTL-bounded; the durable dispatcher invalidates the current process and shared Redis.",
+    "Async historical timing ends at orders.created_at or first observed terminal state, not transaction commit completion."
+  ]
+}
+

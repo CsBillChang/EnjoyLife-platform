@@ -1,0 +1,40 @@
+File: api
+Type: alloc_space
+Time: 2026-09-22 21:17:21 CST
+Duration: 30s, Total samples = 6567.55MB 
+Showing nodes accounting for 6507MB, 99.08% of 6567.55MB total
+Dropped 136 nodes (cum <= 32.84MB)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%  6337.53MB 96.50%  net/http.(*conn).serve
+  768.65MB 11.70% 11.70%  3636.81MB 55.38%  net/http.(*conn).readRequest
+         0     0% 11.70%  2656.21MB 40.44%  net/http.serverHandler.ServeHTTP
+         0     0% 11.70%  2654.19MB 40.41%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+  161.01MB  2.45% 14.16%  2652.69MB 40.39%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+         0     0% 14.16%  2652.69MB 40.39%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0% 14.16%  2652.69MB 40.39%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0% 14.16%  2652.69MB 40.39%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+  850.76MB 12.95% 27.11%  2624.14MB 39.96%  net/http.readRequest
+      44MB  0.67% 27.78%  2399.17MB 36.53%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+         0     0% 27.78%  2355.17MB 35.86%  github.com/gin-gonic/gin.(*Context).Render
+         0     0% 27.78%  2355.17MB 35.86%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0% 27.78%  2355.17MB 35.86%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0% 27.78%  1305.82MB 19.88%  net/textproto.(*Reader).ReadMIMEHeader (inline)
+ 1305.82MB 19.88% 47.66%  1305.82MB 19.88%  net/textproto.readMIMEHeader
+         0     0% 47.66%  1092.81MB 16.64%  github.com/gin-gonic/gin.(*responseWriter).Write
+         0     0% 47.66%  1092.81MB 16.64%  github.com/gin-gonic/gin.(*responseWriter).WriteHeaderNow (inline)
+         0     0% 47.66%  1092.81MB 16.64%  net/http.(*response).WriteHeader
+ 1092.81MB 16.64% 64.30%  1092.81MB 16.64%  net/http.Header.Clone (inline)
+  935.31MB 14.24% 78.54%   935.31MB 14.24%  github.com/gin-gonic/gin/render.writeContentType
+         0     0% 78.54%   382.55MB  5.82%  net/url.ParseRequestURI
+  382.55MB  5.82% 84.37%   382.55MB  5.82%  net/url.parse
+  327.04MB  4.98% 89.35%   327.54MB  4.99%  encoding/json.Marshal
+      40MB  0.61% 89.96%   241.52MB  3.68%  context.WithCancel
+  207.02MB  3.15% 93.11%   207.02MB  3.15%  net.(*conn).Read
+         0     0% 93.11%   207.02MB  3.15%  net/http.(*connReader).backgroundRead
+  201.02MB  3.06% 96.17%   201.52MB  3.07%  context.withCancel (inline)
+         0     0% 96.17%    92.52MB  1.41%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0% 96.17%    92.52MB  1.41%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+   83.50MB  1.27% 97.44%    83.50MB  1.27%  net/textproto.(*Reader).ReadLine (inline)
+    2.50MB 0.038% 97.48%    65.50MB     1%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+      63MB  0.96% 98.44%       63MB  0.96%  fmt.Sprintf
+      42MB  0.64% 99.08%       42MB  0.64%  net/http.(*connReader).startBackgroundRead

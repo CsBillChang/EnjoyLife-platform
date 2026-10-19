@@ -1,0 +1,52 @@
+File: api
+Type: alloc_space
+Time: 2026-09-22 21:04:15 CST
+Duration: 30.01s, Total samples = 3269.41MB 
+Showing nodes accounting for 3208.73MB, 98.14% of 3269.41MB total
+Dropped 119 nodes (cum <= 16.35MB)
+      flat  flat%   sum%        cum   cum%
+  579.64MB 17.73% 17.73%   579.64MB 17.73%  net/textproto.readMIMEHeader
+  452.13MB 13.83% 31.56%   452.13MB 13.83%  net/http.Header.Clone (inline)
+  420.09MB 12.85% 44.41%  1557.38MB 47.64%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+  396.63MB 12.13% 56.54%   396.63MB 12.13%  github.com/gin-gonic/gin/render.writeContentType
+  361.61MB 11.06% 67.60%  1139.78MB 34.86%  net/http.readRequest
+  324.57MB  9.93% 77.53%  1578.85MB 48.29%  net/http.(*conn).readRequest
+  159.02MB  4.86% 82.39%   159.02MB  4.86%  net/url.parse
+  138.02MB  4.22% 86.61%   230.02MB  7.04%  encoding/json.Marshal
+   98.51MB  3.01% 89.63%    99.51MB  3.04%  context.withCancel (inline)
+   92.51MB  2.83% 92.45%    92.51MB  2.83%  net.(*conn).Read
+   52.50MB  1.61% 94.06%    91.50MB  2.80%  encoding/json.mapEncoder.encode
+      39MB  1.19% 95.25%       39MB  1.19%  reflect.unsafe_New
+   37.50MB  1.15% 96.40%    37.50MB  1.15%  net/textproto.(*Reader).ReadLine (inline)
+   25.50MB  0.78% 97.18%       27MB  0.83%  fmt.Sprintf
+      15MB  0.46% 97.64%  1093.28MB 33.44%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+   14.50MB  0.44% 98.08%   114.01MB  3.49%  context.WithCancel
+    1.50MB 0.046% 98.13%    28.50MB  0.87%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+    0.50MB 0.015% 98.14%    17.01MB  0.52%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0% 98.14%       92MB  2.81%  encoding/json.(*encodeState).marshal
+         0     0% 98.14%       92MB  2.81%  encoding/json.(*encodeState).reflectValue
+         0     0% 98.14%    44.01MB  1.35%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0% 98.14%    17.01MB  0.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0% 98.14%    16.51MB   0.5%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0% 98.14%    18.51MB  0.57%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0% 98.14%    44.01MB  1.35%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+         0     0% 98.14%  1557.38MB 47.64%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0% 98.14%  1078.28MB 32.98%  github.com/gin-gonic/gin.(*Context).Render
+         0     0% 98.14%  1557.88MB 47.65%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+         0     0% 98.14%  1557.38MB 47.64%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0% 98.14%   452.13MB 13.83%  github.com/gin-gonic/gin.(*responseWriter).Write
+         0     0% 98.14%   452.13MB 13.83%  github.com/gin-gonic/gin.(*responseWriter).WriteHeaderNow (inline)
+         0     0% 98.14%  1557.38MB 47.64%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+         0     0% 98.14%  1078.28MB 32.98%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0% 98.14%  1078.28MB 32.98%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0% 98.14%    16.51MB   0.5%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0% 98.14%    16.51MB   0.5%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0% 98.14%  3157.39MB 96.57%  net/http.(*conn).serve
+         0     0% 98.14%    92.51MB  2.83%  net/http.(*connReader).backgroundRead
+         0     0% 98.14%   452.13MB 13.83%  net/http.(*response).WriteHeader
+         0     0% 98.14%  1561.03MB 47.75%  net/http.serverHandler.ServeHTTP
+         0     0% 98.14%   579.64MB 17.73%  net/textproto.(*Reader).ReadMIMEHeader (inline)
+         0     0% 98.14%   159.02MB  4.86%  net/url.ParseRequestURI
+         0     0% 98.14%    18.50MB  0.57%  reflect.(*MapIter).Key
+         0     0% 98.14%    20.50MB  0.63%  reflect.(*MapIter).Value
+         0     0% 98.14%       39MB  1.19%  reflect.copyVal

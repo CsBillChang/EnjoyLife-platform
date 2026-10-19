@@ -1,0 +1,36 @@
+{
+  "run_id": "20260922-shop-detail-response-comparison-v1",
+  "diagnostic_sampling_enabled": false,
+  "load": {
+    "warmup_seconds": 10,
+    "round_seconds": 60,
+    "rounds_per_binary": 3,
+    "concurrency": 100,
+    "order": ["baseline", "optimized", "optimized", "baseline", "baseline", "optimized"]
+  },
+  "baseline": {
+    "p95_microseconds": [8946, 4902, 4017],
+    "median_p95_microseconds": 4902,
+    "throughput_rps": [24847.079807702772, 40415.53859299516, 46361.10455243407],
+    "median_throughput_rps": 40415.53859299516,
+    "completed_http_200": 6799640
+  },
+  "optimized": {
+    "p95_microseconds": [7161, 4894, 4676],
+    "median_p95_microseconds": 4894,
+    "throughput_rps": [30548.377986828775, 39826.50418457371, 40766.64288514305],
+    "median_throughput_rps": 39826.50418457371,
+    "completed_http_200": 6745769
+  },
+  "median_change_percent": {
+    "p95": -0.1631986944104491,
+    "throughput": -1.457445400773516
+  },
+  "errors": {
+    "transport": 0,
+    "response_read": 0,
+    "response_close": 0,
+    "incomplete": 0
+  },
+  "conclusion": "no material latency or throughput improvement; retain only the verified allocation reduction claim"
+}

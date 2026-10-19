@@ -1,0 +1,12 @@
+activity=202
+purchase_requests: SUCCEEDED/COMMITTED=500
+orders=500 distinct_users=500 distinct_request_ids=500
+inventory_movements: DEDUCT=500
+coupon_activity: total_stock=500 available_stock=0 generation=1 admission_state=OPEN
+outbox_events: SENT=500
+duplicate (user_id, activity_id) order groups=0
+rabbit queue: ready=0 unacknowledged=0
+
+The values above were read after the valid async benchmark. They are a concise
+record; the reproducible SQL is encoded by the read-only checks documented in
+docs/benchmark-report.md and the schema constraints in migrations/002-005.

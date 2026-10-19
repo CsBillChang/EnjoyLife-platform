@@ -1,0 +1,26 @@
+File: api
+Type: delay
+Time: 2026-09-22 21:03:18 CST
+Duration: 30s, Total samples = 490.63s (1635.18%)
+Showing nodes accounting for 487.85s, 99.43% of 490.63s total
+Dropped 114 nodes (cum <= 2.45s)
+      flat  flat%   sum%        cum   cum%
+   424.78s 86.58% 86.58%    424.78s 86.58%  runtime.selectgo
+         0     0% 86.58%    308.13s 62.80%  github.com/go-sql-driver/mysql.(*mysqlConn).startWatcher.func1
+         0     0% 86.58%     93.20s 19.00%  net/http.(*Server).Serve.gowrap3
+         0     0% 86.58%     93.20s 19.00%  net/http.(*conn).serve
+         0     0% 86.58%     63.07s 12.86%  net/http.(*connReader).abortPendingRead
+         0     0% 86.58%     63.07s 12.86%  net/http.(*response).finishRequest
+    63.07s 12.86% 99.43%     63.07s 12.86%  sync.(*Cond).Wait
+         0     0% 99.43%     30.01s  6.12%  net/http.serverHandler.ServeHTTP
+         0     0% 99.43%        30s  6.11%  net/http.(*ServeMux).ServeHTTP
+         0     0% 99.43%        30s  6.11%  net/http.HandlerFunc.ServeHTTP
+         0     0% 99.43%        30s  6.11%  net/http/pprof.Index
+         0     0% 99.43%        30s  6.11%  net/http/pprof.handler.ServeHTTP
+         0     0% 99.43%        30s  6.11%  net/http/pprof.handler.serveDeltaProfile
+         0     0% 99.43%     29.79s  6.07%  github.com/dgraph-io/ristretto/v2.(*Cache[go.shape.string,go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0% 99.43%     29.79s  6.07%  github.com/dgraph-io/ristretto/v2.NewCache[go.shape.string,go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }].gowrap1
+         0     0% 99.43%     29.26s  5.96%  github.com/dgraph-io/ristretto/v2.(*defaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0% 99.43%     29.26s  5.96%  github.com/dgraph-io/ristretto/v2.newDefaultPolicy[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }].gowrap1
+         0     0% 99.43%     27.57s  5.62%  main.main.gowrap4
+         0     0% 99.43%     27.57s  5.62%  main.runShopInvalidationDispatcher

@@ -1,0 +1,34 @@
+{
+  "run_id": "20260922-delivery",
+  "recorded_at_utc": "2026-09-22T10:50:00Z",
+  "source_identity": "uncommitted workspace; see source-manifest.sha256",
+  "host": {
+    "os": "macOS 27.0 build 26A428",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "logical_cores": 8,
+    "memory_bytes": 8589934592
+  },
+  "tooling": {
+    "go": "go1.26.4 darwin/arm64",
+    "docker": "29.7.2 build a7dcaa6",
+    "compose": "v5.5.1"
+  },
+  "services": {
+    "mysql": {"version": "8.4.11", "image": "mysql:8.4", "digest": "sha256:3466ba4a4828aa8d46fb7c3bc16b67b781c98413cf4ea0fac6feaa6e881faa26", "port": 13306},
+    "redis": {"version": "7.4.11", "image": "redis:7.4-alpine", "digest": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499", "port": 16379},
+    "rabbitmq": {"version": "4.1.8", "image": "rabbitmq:4.1-management-alpine", "digest": "sha256:6fb3095d1d579e11639d9033c9ded1287ca085664c97e9305ffc2a26cee433f5", "amqp_port": 15672, "management_port": 15673}
+  },
+  "compose_project": "huixiang-life",
+  "container_limits": "not configured",
+  "service_config_nonsecret": {
+    "api_address": "127.0.0.1:18080",
+    "pprof_address": "127.0.0.1:18081",
+    "worker_count": 4,
+    "rabbit_prefetch": 4,
+    "gorm_max_open_connections": 20,
+    "gorm_max_idle_connections": 10,
+    "http_access_log_during_measurement": false,
+    "gorm_log_during_measurement": "silent"
+  }
+}

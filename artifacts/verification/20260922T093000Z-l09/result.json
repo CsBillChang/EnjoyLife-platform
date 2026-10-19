@@ -1,0 +1,71 @@
+{
+  "run_id": "20260922T093000Z-l09",
+  "scope": "local L09 asynchronous purchase and recovery verification",
+  "source_manifest_sha256": "86714746da670fa82d346ff26e5b5ad9e0eb84131a3fe1f003b7e9e0db43edd0",
+  "environment": {
+    "go": "go1.26.4 darwin/arm64",
+    "docker_server": "29.7.2",
+    "docker_compose": "v5.5.1",
+    "compose_project": "huixiang-life",
+    "services": ["mysql:8.4 healthy", "redis:7.4-alpine healthy", "rabbitmq:4.1-management-alpine healthy"]
+  },
+  "http_to_worker_e2e": {
+    "login_http": 200,
+    "accept_http": 202,
+    "terminal_status": "SUCCEEDED",
+    "idempotent_replay_http": 202,
+    "owned_order_http": 200,
+    "request_id": "0c3337d4-10ca-4de9-9e24-89d98f268c1c",
+    "order_id": 36,
+    "accepted_to_order_created_microseconds": 38661,
+    "order_count": 1,
+    "deduct_movement_count": 1,
+    "outbox_status": "SENT",
+    "activity_available_stock_after": 4,
+    "note": "This is one correctness sample, not a latency benchmark or P95."
+  },
+  "mysql_duplicate_processing": {
+    "concurrent_process_calls": 8,
+    "orders": 1,
+    "deduct_movements": 1,
+    "result": "PASS"
+  },
+  "terminal_failures": {
+    "processing_deadline": "FAILED without stock deduction",
+    "generation_change": "FAILED without stock deduction",
+    "result": "PASS"
+  },
+  "outbox_and_rabbit_reliability": {
+    "stale_lease_owner_fenced": "PASS",
+    "attempts_1000_does_not_poison_next_event": "PASS",
+    "last_attempt_failure_or_expired_crash_becomes_dead": "PASS",
+    "mandatory_unroutable_return_is_not_success": "PASS",
+    "confirmed_routed_message_read_back_by_message_id": "PASS"
+  },
+  "rabbit_restart": {
+    "request_accepted_while_broker_stopped_http": 202,
+    "worker_backoff_observed": ["250ms", "500ms", "1s", "2s"],
+    "request_after_restart": "SUCCEEDED",
+    "outbox_after_restart": "SENT",
+    "result": "PASS"
+  },
+  "commit_before_ack_redelivery": {
+    "first_delivery_manual_ack": true,
+    "mysql_commit_observed_before_channel_close": true,
+    "first_channel_closed_without_ack_nack_or_reject": true,
+    "second_connection_redelivered": true,
+    "same_message_id_and_body": true,
+    "same_request_and_order": true,
+    "orders": 1,
+    "deduct_movements": 1,
+    "release_movements": 0,
+    "available_stock": 0,
+    "queue_empty_after_second_ack": true,
+    "result": "PASS"
+  },
+  "not_yet_claimed": [
+    "P95 or throughput",
+    "Redis Lua admission or generation rebuild",
+    "production behavior"
+  ]
+}

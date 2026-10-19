@@ -1,0 +1,52 @@
+File: api
+Type: inuse_objects
+Time: 2026-09-22 21:18:35 CST
+Showing nodes accounting for 59311, 98.58% of 60168 total
+Dropped 37 nodes (cum <= 300)
+      flat  flat%   sum%        cum   cum%
+     49153 81.69% 81.69%      49153 81.69%  syscall.anyToSockaddr
+      4681  7.78% 89.47%       4681  7.78%  context.(*cancelCtx).Done
+      3277  5.45% 94.92%       4766  7.92%  regexp.compile
+      1489  2.47% 97.39%       1489  2.47%  regexp/syntax.(*compiler).inst (inline)
+       711  1.18% 98.58%        711  1.18%  runtime.mallocgc
+         0     0% 98.58%       4766  7.92%  github.com/jinzhu/inflection.compile
+         0     0% 98.58%       4766  7.92%  github.com/jinzhu/inflection.init.0
+         0     0% 98.58%      49153 81.69%  github.com/redis/go-redis/v9.(*Options).init.NewDialer.func1
+         0     0% 98.58%      49153 81.69%  github.com/redis/go-redis/v9.(*baseClient).dial
+         0     0% 98.58%      49153 81.69%  github.com/redis/go-redis/v9.(*hooksMixin).dialHook
+         0     0% 98.58%      49153 81.69%  github.com/redis/go-redis/v9.newConnPool.func1
+         0     0% 98.58%      49351 82.02%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).dialConn
+         0     0% 98.58%      49351 82.02%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).newConn
+         0     0% 98.58%      49351 82.02%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).queuedNewConn.func2
+         0     0% 98.58%      49153 81.69%  net.(*Dialer).DialContext
+         0     0% 98.58%      49153 81.69%  net.(*netFD).connect
+         0     0% 98.58%      49153 81.69%  net.(*netFD).dial
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).dialParallel
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).dialSerial
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).dialSingle
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).dialTCP
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).doDialTCP (inline)
+         0     0% 98.58%      49153 81.69%  net.(*sysDialer).doDialTCPProto
+         0     0% 98.58%      49153 81.69%  net.internetSocket
+         0     0% 98.58%      49153 81.69%  net.socket
+         0     0% 98.58%       4681  7.78%  os/signal.NotifyContext.func1
+         0     0% 98.58%       4766  7.92%  regexp.Compile (inline)
+         0     0% 98.58%       4766  7.92%  regexp.MustCompile
+         0     0% 98.58%        372  0.62%  regexp/syntax.(*compiler).cap (inline)
+         0     0% 98.58%       1117  1.86%  regexp/syntax.(*compiler).compile
+         0     0% 98.58%        745  1.24%  regexp/syntax.(*compiler).empty (inline)
+         0     0% 98.58%       1489  2.47%  regexp/syntax.Compile
+         0     0% 98.58%        711  1.18%  runtime.allocm
+         0     0% 98.58%       4785  7.95%  runtime.doInit (inline)
+         0     0% 98.58%       4785  7.95%  runtime.doInit1
+         0     0% 98.58%        455  0.76%  runtime.mProfStackInit (inline)
+         0     0% 98.58%       4785  7.95%  runtime.main
+         0     0% 98.58%        455  0.76%  runtime.makeProfStackFP (inline)
+         0     0% 98.58%        455  0.76%  runtime.makeslice
+         0     0% 98.58%        455  0.76%  runtime.mcommoninit
+         0     0% 98.58%        711  1.18%  runtime.newm
+         0     0% 98.58%        455  0.76%  runtime.newproc.func1
+         0     0% 98.58%        711  1.18%  runtime.startm
+         0     0% 98.58%        455  0.76%  runtime.systemstack
+         0     0% 98.58%        711  1.18%  runtime.wakep
+         0     0% 98.58%      49153 81.69%  syscall.Getpeername

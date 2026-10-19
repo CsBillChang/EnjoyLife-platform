@@ -1,0 +1,59 @@
+File: api
+Type: inuse_objects
+Time: 2026-09-22 21:04:38 CST
+Showing nodes accounting for 12792, 100% of 12792 total
+      flat  flat%   sum%        cum   cum%
+      9362 73.19% 73.19%       9362 73.19%  regexp/syntax.(*parser).newRegexp (inline)
+      1223  9.56% 82.75%       1223  9.56%  runtime.mallocgc
+       745  5.82% 88.57%        745  5.82%  regexp.onePassCopy
+       512  4.00% 92.57%        512  4.00%  github.com/dgraph-io/ristretto/v2.(*lockedMap[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).Set
+       467  3.65% 96.22%        467  3.65%  bufio.NewWriterSize (inline)
+       256  2.00% 98.23%        256  2.00%  github.com/ugorji/go/codec.helperEncDriverCborBytes.fastpathEList
+       227  1.77%   100%        227  1.77%  bufio.NewReaderSize (inline)
+         0     0%   100%        128  1.00%  bufio.NewReader (inline)
+         0     0%   100%        512  4.00%  github.com/dgraph-io/ristretto/v2.(*Cache[go.shape.string,go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0%   100%        512  4.00%  github.com/dgraph-io/ristretto/v2.(*shardedMap[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).Set
+         0     0%   100%      10107 79.01%  github.com/jinzhu/inflection.compile
+         0     0%   100%      10107 79.01%  github.com/jinzhu/inflection.init.0
+         0     0%   100%        181  1.41%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).dialConn
+         0     0%   100%        181  1.41%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).newConn
+         0     0%   100%        181  1.41%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).queuedNewConn.func2
+         0     0%   100%        181  1.41%  github.com/redis/go-redis/v9/internal/pool.NewConnWithBufferSize
+         0     0%   100%         99  0.77%  github.com/redis/go-redis/v9/internal/proto.NewReaderSize (inline)
+         0     0%   100%        256  2.00%  github.com/ugorji/go/codec.init
+         0     0%   100%        513  4.01%  net/http.(*conn).serve
+         0     0%   100%        128  1.00%  net/http.newBufioReader
+         0     0%   100%        385  3.01%  net/http.newBufioWriterSize
+         0     0%   100%      10107 79.01%  regexp.Compile (inline)
+         0     0%   100%      10107 79.01%  regexp.MustCompile
+         0     0%   100%      10107 79.01%  regexp.compile
+         0     0%   100%        745  5.82%  regexp.compileOnePass
+         0     0%   100%       9362 73.19%  regexp/syntax.(*parser).literal
+         0     0%   100%       9362 73.19%  regexp/syntax.Parse (inline)
+         0     0%   100%       9362 73.19%  regexp/syntax.parse
+         0     0%   100%       1223  9.56%  runtime.allocm
+         0     0%   100%      10363 81.01%  runtime.doInit (inline)
+         0     0%   100%      10363 81.01%  runtime.doInit1
+         0     0%   100%        256  2.00%  runtime.findRunnable
+         0     0%   100%        256  2.00%  runtime.forEachPInternal
+         0     0%   100%        256  2.00%  runtime.gcMarkDone.forEachP.func5
+         0     0%   100%        711  5.56%  runtime.handoffp
+         0     0%   100%        256  2.00%  runtime.injectglist
+         0     0%   100%        256  2.00%  runtime.injectglist.func1
+         0     0%   100%        455  3.56%  runtime.mProfStackInit (inline)
+         0     0%   100%      10363 81.01%  runtime.main
+         0     0%   100%        455  3.56%  runtime.makeProfStackFP (inline)
+         0     0%   100%        455  3.56%  runtime.makeslice
+         0     0%   100%        455  3.56%  runtime.mcommoninit
+         0     0%   100%        967  7.56%  runtime.mstart
+         0     0%   100%        967  7.56%  runtime.mstart0
+         0     0%   100%        967  7.56%  runtime.mstart1
+         0     0%   100%       1223  9.56%  runtime.newm
+         0     0%   100%        768  6.00%  runtime.newobject
+         0     0%   100%        256  2.00%  runtime.resetspinning
+         0     0%   100%        455  3.56%  runtime.retake
+         0     0%   100%        512  4.00%  runtime.schedule
+         0     0%   100%       1223  9.56%  runtime.startm
+         0     0%   100%        455  3.56%  runtime.sysmon
+         0     0%   100%        256  2.00%  runtime.systemstack
+         0     0%   100%        256  2.00%  runtime.wakep

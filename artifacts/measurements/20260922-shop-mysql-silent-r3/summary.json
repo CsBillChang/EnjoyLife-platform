@@ -1,0 +1,28 @@
+{
+  "run_id": "mysql-silent-r3",
+  "base_url": "http://127.0.0.1:18080",
+  "requests": 20000,
+  "concurrency": 100,
+  "first_shop_id": 1000001,
+  "shop_count": 10000,
+  "hot_shop_count": 100,
+  "hot_percent": 80,
+  "elapsed_milliseconds": 1053,
+  "throughput_requests_per_second": 18992.65490124685,
+  "all_completed": {
+    "count": 20000,
+    "p50_microseconds": 3966,
+    "p95_microseconds": 13452,
+    "p99_microseconds": 20367
+  },
+  "successful_200": {
+    "count": 20000,
+    "p50_microseconds": 3966,
+    "p95_microseconds": 13452,
+    "p99_microseconds": 20367
+  },
+  "http_statuses": {
+    "200": 20000
+  },
+  "transport_errors": 0
+}

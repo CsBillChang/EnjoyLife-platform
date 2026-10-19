@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-09-22T10:44:36.479493Z",
+  "finished_at": "2026-09-22T10:44:43.756673Z",
+  "activity_id": 202,
+  "requests": 500,
+  "concurrency": 100,
+  "timeout": "5m0s",
+  "http_status": {
+    "202": 500
+  },
+  "terminal_status": {
+    "SUCCEEDED": 500
+  },
+  "failures": {},
+  "unfinished": 0,
+  "exact_failure_times_unavailable": 0,
+  "order_created_latency_us": {
+    "count": 500,
+    "p50": 3004605,
+    "p95": 3927459,
+    "p99": 4204070
+  }
+}

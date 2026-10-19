@@ -1,0 +1,50 @@
+File: api
+Type: alloc_objects
+Time: 2026-09-22 21:04:15 CST
+Duration: 30.01s, Total samples = 32613074 
+Showing nodes accounting for 32349808, 99.19% of 32613074 total
+Dropped 121 nodes (cum <= 163065)
+      flat  flat%   sum%        cum   cum%
+   7056623 21.64% 21.64%    7056623 21.64%  net/textproto.readMIMEHeader
+   3400100 10.43% 32.06%   15009248 46.02%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+   3366619 10.32% 42.39%    3366619 10.32%  net/http.Header.Clone (inline)
+   2555943  7.84% 50.22%    2555943  7.84%  reflect.unsafe_New
+   2300638  7.05% 57.28%   15182427 46.55%  net/http.(*conn).readRequest
+   1291158  3.96% 61.24%    1296200  3.97%  context.withCancel (inline)
+   1228838  3.77% 65.00%    1228838  3.77%  net/textproto.(*Reader).ReadLine (inline)
+   1212508  3.72% 68.72%    1212508  3.72%  net.(*conn).Read
+   1184925  3.63% 72.36%   10645872 32.64%  net/http.readRequest
+   1181534  3.62% 75.98%    1181534  3.62%  github.com/gin-gonic/gin/render.writeContentType
+   1157961  3.55% 79.53%    1157961  3.55%  net/url.parse
+   1146933  3.52% 83.05%    3702876 11.35%  encoding/json.mapEncoder.encode
+   1130634  3.47% 86.51%    4833965 14.82%  encoding/json.Marshal
+   1114138  3.42% 89.93%    1115504  3.42%  fmt.Sprintf
+    983055  3.01% 92.94%   10364718 31.78%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+    983055  3.01% 95.96%     983055  3.01%  net/http.(*connReader).startBackgroundRead
+    950287  2.91% 98.87%    2246487  6.89%  context.WithCancel
+     98305   0.3% 99.17%    1213809  3.72%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+      6554  0.02% 99.19%     166334  0.51%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0% 99.19%    3703331 11.36%  encoding/json.(*encodeState).marshal
+         0     0% 99.19%    3703331 11.36%  encoding/json.(*encodeState).reflectValue
+         0     0% 99.19%    1244430  3.82%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0% 99.19%     166334  0.51%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0% 99.19%     208464  0.64%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0% 99.19%    1244430  3.82%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+         0     0% 99.19%   15009248 46.02%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0% 99.19%    9381663 28.77%  github.com/gin-gonic/gin.(*Context).Render
+         0     0% 99.19%   15013344 46.03%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+         0     0% 99.19%   15009248 46.02%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0% 99.19%    3366619 10.32%  github.com/gin-gonic/gin.(*responseWriter).Write
+         0     0% 99.19%    3366619 10.32%  github.com/gin-gonic/gin.(*responseWriter).WriteHeaderNow (inline)
+         0     0% 99.19%   15009248 46.02%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+         0     0% 99.19%    9381663 28.77%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0% 99.19%    9381663 28.77%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0% 99.19%   31182886 95.61%  net/http.(*conn).serve
+         0     0% 99.19%    1212508  3.72%  net/http.(*connReader).backgroundRead
+         0     0% 99.19%    3366619 10.32%  net/http.(*response).WriteHeader
+         0     0% 99.19%   15015781 46.04%  net/http.serverHandler.ServeHTTP
+         0     0% 99.19%    7056623 21.64%  net/textproto.(*Reader).ReadMIMEHeader (inline)
+         0     0% 99.19%    1157961  3.55%  net/url.ParseRequestURI
+         0     0% 99.19%    1212435  3.72%  reflect.(*MapIter).Key
+         0     0% 99.19%    1343508  4.12%  reflect.(*MapIter).Value
+         0     0% 99.19%    2555943  7.84%  reflect.copyVal

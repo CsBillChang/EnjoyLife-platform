@@ -1,0 +1,11 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/CsBillChang/local-life-platform/internal/shop
+cpu: Apple M2
+BenchmarkHandlerGetByID-8   	  577166	      2089 ns/op	    6708 B/op	      25 allocs/op
+BenchmarkHandlerGetByID-8   	  516865	      2146 ns/op	    6709 B/op	      25 allocs/op
+BenchmarkHandlerGetByID-8   	  511549	      2269 ns/op	    6708 B/op	      25 allocs/op
+BenchmarkHandlerGetByID-8   	  615490	      2085 ns/op	    6709 B/op	      25 allocs/op
+BenchmarkHandlerGetByID-8   	  609361	      2089 ns/op	    6709 B/op	      25 allocs/op
+PASS
+ok  	github.com/CsBillChang/local-life-platform/internal/shop	6.731s

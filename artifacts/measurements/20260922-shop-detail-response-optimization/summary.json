@@ -1,0 +1,19 @@
+{
+  "scenario": "shop detail handler typed response microbenchmark",
+  "command": "go test -run ^$ -bench ^BenchmarkHandlerGetByID$ -benchmem -count=5 ./internal/shop",
+  "baseline": {
+    "bytes_per_op_range": [6708, 6709],
+    "allocs_per_op": 25,
+    "median_nanoseconds_per_op": 2089
+  },
+  "optimized": {
+    "bytes_per_op": 6292,
+    "allocs_per_op": 20,
+    "median_nanoseconds_per_op": 1859
+  },
+  "change": {
+    "bytes_per_op": "-416 to -417 (-6.2%)",
+    "allocs_per_op": "-5 (-20.0%)",
+    "median_nanoseconds_per_op_percent": -11.010052656773575
+  }
+}

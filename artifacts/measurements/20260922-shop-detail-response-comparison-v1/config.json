@@ -1,0 +1,16 @@
+{
+  "scenario": "typed-detail-response",
+  "duration_seconds": 60,
+  "warmup_seconds": 10,
+  "rounds": 3,
+  "concurrency": 100,
+  "shop_cache_mode": "two-level",
+  "pprof_mutex_fraction": 0,
+  "pprof_block_rate": 0,
+  "first_shop_id": 1000001,
+  "shop_count": 10000,
+  "hot_shop_count": 100,
+  "hot_percent": 80,
+  "timeout_milliseconds": 2000,
+  "latency_boundary": "before request until response body fully read and closed"
+}

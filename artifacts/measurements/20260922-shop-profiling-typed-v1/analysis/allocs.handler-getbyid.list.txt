@@ -1,0 +1,21 @@
+Total: 6.41GB
+ROUTINE ======================== github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID in /Users/csbillchang/code/项目/local-life-platform/internal/shop/handler.go
+  161.01MB     2.59GB (flat, cum) 40.39% of Total
+         .          .     53:func (h *Handler) getByID(c *gin.Context) {
+         .          .     54:	id, err := strconv.ParseInt(c.Param("id"), 10, 64)
+         .          .     55:	if err != nil {
+         .          .     56:		h.writeError(c, http.StatusBadRequest, "INVALID_REQUEST", ErrInvalidShopID.Error())
+         .          .     57:		return
+         .          .     58:	}
+         .          .     59:
+         .    92.52MB     60:	result, err := h.service.GetByID(c.Request.Context(), id)
+         .          .     61:	if err != nil {
+         .          .     62:		h.writeServiceError(c, err)
+         .          .     63:		return
+         .          .     64:	}
+  161.01MB     2.50GB     65:	c.JSON(http.StatusOK, shopDetailResponse{Data: result})
+         .          .     66:}
+         .          .     67:
+         .          .     68:func optionalPositiveInt(raw string, fallback int) (int, error) {
+         .          .     69:	if raw == "" {
+         .          .     70:		return fallback, nil

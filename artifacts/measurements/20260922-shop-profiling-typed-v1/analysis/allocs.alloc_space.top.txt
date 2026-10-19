@@ -1,0 +1,40 @@
+File: api
+Type: alloc_space
+Time: 2026-09-22 21:17:21 CST
+Duration: 30s, Total samples = 6567.55MB 
+Showing nodes accounting for 6507MB, 99.08% of 6567.55MB total
+Dropped 136 nodes (cum <= 32.84MB)
+      flat  flat%   sum%        cum   cum%
+ 1305.82MB 19.88% 19.88%  1305.82MB 19.88%  net/textproto.readMIMEHeader
+ 1092.81MB 16.64% 36.52%  1092.81MB 16.64%  net/http.Header.Clone (inline)
+  935.31MB 14.24% 50.76%   935.31MB 14.24%  github.com/gin-gonic/gin/render.writeContentType
+  850.76MB 12.95% 63.72%  2624.14MB 39.96%  net/http.readRequest
+  768.65MB 11.70% 75.42%  3636.81MB 55.38%  net/http.(*conn).readRequest
+  382.55MB  5.82% 81.25%   382.55MB  5.82%  net/url.parse
+  327.04MB  4.98% 86.23%   327.54MB  4.99%  encoding/json.Marshal
+  207.02MB  3.15% 89.38%   207.02MB  3.15%  net.(*conn).Read
+  201.02MB  3.06% 92.44%   201.52MB  3.07%  context.withCancel (inline)
+  161.01MB  2.45% 94.89%  2652.69MB 40.39%  github.com/CsBillChang/local-life-platform/internal/shop.(*Handler).getByID
+   83.50MB  1.27% 96.16%    83.50MB  1.27%  net/textproto.(*Reader).ReadLine (inline)
+      63MB  0.96% 97.12%       63MB  0.96%  fmt.Sprintf
+      44MB  0.67% 97.79%  2399.17MB 36.53%  github.com/gin-gonic/gin.(*Context).JSON (inline)
+      42MB  0.64% 98.43%       42MB  0.64%  net/http.(*connReader).startBackgroundRead
+      40MB  0.61% 99.04%   241.52MB  3.68%  context.WithCancel
+    2.50MB 0.038% 99.08%    65.50MB     1%  github.com/CsBillChang/local-life-platform/internal/shop.shopCacheKey (inline)
+         0     0% 99.08%    92.52MB  1.41%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).FindByID
+         0     0% 99.08%    92.52MB  1.41%  github.com/CsBillChang/local-life-platform/internal/shop.(*Service).GetByID (inline)
+         0     0% 99.08%  2652.69MB 40.39%  github.com/gin-gonic/gin.(*Context).Next (inline)
+         0     0% 99.08%  2355.17MB 35.86%  github.com/gin-gonic/gin.(*Context).Render
+         0     0% 99.08%  2654.19MB 40.41%  github.com/gin-gonic/gin.(*Engine).ServeHTTP
+         0     0% 99.08%  2652.69MB 40.39%  github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+         0     0% 99.08%  1092.81MB 16.64%  github.com/gin-gonic/gin.(*responseWriter).Write
+         0     0% 99.08%  1092.81MB 16.64%  github.com/gin-gonic/gin.(*responseWriter).WriteHeaderNow (inline)
+         0     0% 99.08%  2652.69MB 40.39%  github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+         0     0% 99.08%  2355.17MB 35.86%  github.com/gin-gonic/gin/render.JSON.Render
+         0     0% 99.08%  2355.17MB 35.86%  github.com/gin-gonic/gin/render.WriteJSON
+         0     0% 99.08%  6337.53MB 96.50%  net/http.(*conn).serve
+         0     0% 99.08%   207.02MB  3.15%  net/http.(*connReader).backgroundRead
+         0     0% 99.08%  1092.81MB 16.64%  net/http.(*response).WriteHeader
+         0     0% 99.08%  2656.21MB 40.44%  net/http.serverHandler.ServeHTTP
+         0     0% 99.08%  1305.82MB 19.88%  net/textproto.(*Reader).ReadMIMEHeader (inline)
+         0     0% 99.08%   382.55MB  5.82%  net/url.ParseRequestURI

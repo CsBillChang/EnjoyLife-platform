@@ -1,0 +1,94 @@
+File: api
+Type: inuse_space
+Time: 2026-09-22 21:17:45 CST
+Showing nodes accounting for 14552.46kB, 100% of 14552.46kB total
+      flat  flat%   sum%        cum   cum%
+    3683kB 25.31% 25.31%     3683kB 25.31%  bufio.NewReaderSize (inline)
+    3683kB 25.31% 50.62%     3683kB 25.31%  bufio.NewWriterSize (inline)
+ 1537.72kB 10.57% 61.18%  1537.72kB 10.57%  regexp/syntax.(*compiler).inst (inline)
+ 1536.05kB 10.56% 71.74%  1536.05kB 10.56%  syscall.anyToSockaddr
+ 1025.56kB  7.05% 78.79%  1025.56kB  7.05%  runtime.mallocgc
+  525.43kB  3.61% 82.40%   525.43kB  3.61%  golang.org/x/net/html.map.init.1
+     513kB  3.53% 85.92%      513kB  3.53%  github.com/dgraph-io/ristretto/v2.(*lockedMap[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).Set
+  512.56kB  3.52% 89.44%   512.56kB  3.52%  internal/poll.runtime_pollSetDeadline
+  512.08kB  3.52% 92.96%  2049.80kB 14.09%  regexp.compile
+  512.05kB  3.52% 96.48%   512.05kB  3.52%  context.(*cancelCtx).Done
+  512.01kB  3.52%   100%   512.01kB  3.52%  reflect.unsafe_New
+         0     0%   100%      514kB  3.53%  bufio.NewReader (inline)
+         0     0%   100%   512.01kB  3.52%  database/sql.(*Rows).Scan
+         0     0%   100%   512.01kB  3.52%  database/sql.(*Rows).scanLocked
+         0     0%   100%   512.01kB  3.52%  database/sql.convertAssignRows
+         0     0%   100%   512.01kB  3.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache
+         0     0%   100%   512.01kB  3.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).loadAndCache.func1
+         0     0%   100%   512.01kB  3.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*CachedRepository).triggerRefresh.func1
+         0     0%   100%   512.01kB  3.52%  github.com/CsBillChang/local-life-platform/internal/shop.(*MySQLRepository).FindByID
+         0     0%   100%      513kB  3.53%  github.com/dgraph-io/ristretto/v2.(*Cache[go.shape.string,go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).processItems
+         0     0%   100%      513kB  3.53%  github.com/dgraph-io/ristretto/v2.(*shardedMap[go.shape.struct { Shop *github.com/CsBillChang/local-life-platform/internal/shop.Shop "json:\"shop,omitempty\""; NotFound bool "json:\"not_found\""; SoftExpiresAt time.Time "json:\"soft_expires_at\""; HardExpiresAt time.Time "json:\"hard_expires_at\"" }]).Set
+         0     0%   100%  2049.80kB 14.09%  github.com/jinzhu/inflection.compile
+         0     0%   100%  2049.80kB 14.09%  github.com/jinzhu/inflection.init.0
+         0     0%   100%  1536.05kB 10.56%  github.com/redis/go-redis/v9.(*Options).init.NewDialer.func1
+         0     0%   100%  1536.05kB 10.56%  github.com/redis/go-redis/v9.(*baseClient).dial
+         0     0%   100%  1536.05kB 10.56%  github.com/redis/go-redis/v9.(*hooksMixin).dialHook
+         0     0%   100%  1536.05kB 10.56%  github.com/redis/go-redis/v9.newConnPool.func1
+         0     0%   100%  7874.04kB 54.11%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).dialConn
+         0     0%   100%  7874.04kB 54.11%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).newConn
+         0     0%   100%  7874.04kB 54.11%  github.com/redis/go-redis/v9/internal/pool.(*ConnPool).queuedNewConn.func2
+         0     0%   100%     6338kB 43.55%  github.com/redis/go-redis/v9/internal/pool.NewConnWithBufferSize
+         0     0%   100%     3169kB 21.78%  github.com/redis/go-redis/v9/internal/proto.NewReaderSize (inline)
+         0     0%   100%   525.43kB  3.61%  golang.org/x/net/html.init
+         0     0%   100%   512.01kB  3.52%  golang.org/x/sync/singleflight.(*Group).Do
+         0     0%   100%   512.01kB  3.52%  golang.org/x/sync/singleflight.(*Group).doCall
+         0     0%   100%   512.01kB  3.52%  golang.org/x/sync/singleflight.(*Group).doCall.func2
+         0     0%   100%   512.01kB  3.52%  gorm.io/gorm.(*DB).Take
+         0     0%   100%   512.01kB  3.52%  gorm.io/gorm.(*DB).scanIntoStruct
+         0     0%   100%   512.01kB  3.52%  gorm.io/gorm.(*processor).Execute
+         0     0%   100%   512.01kB  3.52%  gorm.io/gorm.Scan
+         0     0%   100%   512.01kB  3.52%  gorm.io/gorm/callbacks.Query
+         0     0%   100%   512.56kB  3.52%  internal/poll.(*FD).SetWriteDeadline (inline)
+         0     0%   100%   512.56kB  3.52%  internal/poll.setDeadlineImpl
+         0     0%   100%  1536.05kB 10.56%  net.(*Dialer).DialContext
+         0     0%   100%   512.56kB  3.52%  net.(*conn).SetWriteDeadline
+         0     0%   100%   512.56kB  3.52%  net.(*netFD).SetWriteDeadline (inline)
+         0     0%   100%  1536.05kB 10.56%  net.(*netFD).connect
+         0     0%   100%  1536.05kB 10.56%  net.(*netFD).dial
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).dialParallel
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).dialSerial
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).dialSingle
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).dialTCP
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).doDialTCP (inline)
+         0     0%   100%  1536.05kB 10.56%  net.(*sysDialer).doDialTCPProto
+         0     0%   100%  1536.05kB 10.56%  net.internetSocket
+         0     0%   100%  1536.05kB 10.56%  net.socket
+         0     0%   100%   512.56kB  3.52%  net/http.(*conn).readRequest
+         0     0%   100%   512.56kB  3.52%  net/http.(*conn).readRequest.func1
+         0     0%   100%  1540.57kB 10.59%  net/http.(*conn).serve
+         0     0%   100%      514kB  3.53%  net/http.newBufioReader
+         0     0%   100%      514kB  3.53%  net/http.newBufioWriterSize
+         0     0%   100%   512.05kB  3.52%  os/signal.NotifyContext.func1
+         0     0%   100%   512.01kB  3.52%  reflect.New
+         0     0%   100%  2049.80kB 14.09%  regexp.Compile (inline)
+         0     0%   100%  2049.80kB 14.09%  regexp.MustCompile
+         0     0%   100%   512.69kB  3.52%  regexp/syntax.(*compiler).cap (inline)
+         0     0%   100%  1025.03kB  7.04%  regexp/syntax.(*compiler).compile
+         0     0%   100%   512.34kB  3.52%  regexp/syntax.(*compiler).empty (inline)
+         0     0%   100%  1537.72kB 10.57%  regexp/syntax.Compile
+         0     0%   100%  1025.56kB  7.05%  runtime.allocm
+         0     0%   100%  2575.22kB 17.70%  runtime.doInit (inline)
+         0     0%   100%  2575.22kB 17.70%  runtime.doInit1
+         0     0%   100%   512.56kB  3.52%  runtime.mProfStackInit (inline)
+         0     0%   100%  2575.22kB 17.70%  runtime.main
+         0     0%   100%   512.56kB  3.52%  runtime.makeProfStackFP (inline)
+         0     0%   100%   512.56kB  3.52%  runtime.makeslice
+         0     0%   100%   512.56kB  3.52%  runtime.mcommoninit
+         0     0%   100%      513kB  3.53%  runtime.mstart
+         0     0%   100%      513kB  3.53%  runtime.mstart0
+         0     0%   100%      513kB  3.53%  runtime.mstart1
+         0     0%   100%  1025.56kB  7.05%  runtime.newm
+         0     0%   100%      513kB  3.53%  runtime.newobject
+         0     0%   100%   512.56kB  3.52%  runtime.newproc.func1
+         0     0%   100%      513kB  3.53%  runtime.resetspinning
+         0     0%   100%      513kB  3.53%  runtime.schedule
+         0     0%   100%  1025.56kB  7.05%  runtime.startm
+         0     0%   100%   512.56kB  3.52%  runtime.systemstack
+         0     0%   100%  1025.56kB  7.05%  runtime.wakep
+         0     0%   100%  1536.05kB 10.56%  syscall.Getpeername

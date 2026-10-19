@@ -1,0 +1,36 @@
+Total: 3.19GB
+ROUTINE ======================== encoding/json.mapEncoder.encode in /opt/homebrew/Cellar/go/1.26.4/libexec/src/encoding/json/encode.go
+   52.50MB    91.50MB (flat, cum)  2.80% of Total
+         .          .    765:func (me mapEncoder) encode(e *encodeState, v reflect.Value, opts encOpts) {
+         .          .    766:	if v.IsNil() {
+         .          .    767:		e.WriteString("null")
+         .          .    768:		return
+         .          .    769:	}
+         .          .    770:	if e.ptrLevel++; e.ptrLevel > startDetectingCyclesAfter {
+         .          .    771:		// We're a large number of nested ptrEncoder.encode calls deep;
+         .          .    772:		// start checking if we've run into a pointer cycle.
+         .          .    773:		ptr := v.UnsafePointer()
+         .          .    774:		if _, ok := e.ptrSeen[ptr]; ok {
+         .          .    775:			e.error(&UnsupportedValueError{v, fmt.Sprintf("encountered a cycle via %s", v.Type())})
+         .          .    776:		}
+         .          .    777:		e.ptrSeen[ptr] = struct{}{}
+         .          .    778:		defer delete(e.ptrSeen, ptr)
+         .          .    779:	}
+         .          .    780:	e.WriteByte('{')
+         .          .    781:
+         .          .    782:	// Extract and sort the keys.
+         .          .    783:	var (
+   52.50MB    52.50MB    784:		sv  = make([]reflectWithString, v.Len())
+         .          .    785:		mi  = v.MapRange()
+         .          .    786:		err error
+         .          .    787:	)
+         .          .    788:	for i := 0; mi.Next(); i++ {
+         .    18.50MB    789:		if sv[i].ks, err = resolveKeyName(mi.Key()); err != nil {
+         .          .    790:			e.error(fmt.Errorf("json: encoding error for type %q: %q", v.Type().String(), err.Error()))
+         .          .    791:		}
+         .    20.50MB    792:		sv[i].v = mi.Value()
+         .          .    793:	}
+         .          .    794:	slices.SortFunc(sv, func(i, j reflectWithString) int {
+         .          .    795:		return strings.Compare(i.ks, j.ks)
+         .          .    796:	})
+         .          .    797:

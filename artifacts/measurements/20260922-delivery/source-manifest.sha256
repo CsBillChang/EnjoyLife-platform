@@ -1,0 +1,6 @@
+# Aggregate SHA-256 of the sorted per-file SHA-256 stream for 106 non-artifact,
+# non-.git files in the uncommitted workspace used for the final verification.
+886546a8b01ed9f0b630b231eb58f4b73891a444cb51217fb4184a82c2568eb5  sorted-source-hash-stream
+
+# Reproduce from repository root:
+# rg --files --hidden -g '!.git/**' -g '!artifacts/**' | sort | xargs shasum -a 256 | shasum -a 256
